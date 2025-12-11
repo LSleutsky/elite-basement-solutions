@@ -15,8 +15,8 @@ app.use(
     build: () => import("virtual:react-router/server-build"),
     getLoadContext() {
       return {
-        VALUE_FROM_EXPRESS: "Hello from Express",
+        VALUE_FROM_EXPRESS: "Hello from Express"
       };
-    },
-  }),
+    }
+  })
 );
