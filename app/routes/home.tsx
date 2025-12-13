@@ -16,7 +16,7 @@ export function loader({ context }: Route.LoaderArgs) {
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <div className="text-2xl text-purple-800">This is the Home Page</div>
+      <div className="text-2xl text-green-500 dark:text-yellow-800">This is the Home Page</div>
       <nav>
         <ul>
           <li>
