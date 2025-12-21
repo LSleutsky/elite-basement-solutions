@@ -2,10 +2,12 @@ import { Link } from "react-router";
 
 import { Route } from "./+types/home";
 
+import Logo from "@/components/Logo";
+
 export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" }
+    { title: "Elite Basement Solutions" },
+    { name: "description", content: "Welcome to Elite Basement Solutions!" }
   ];
 }
 
@@ -17,6 +19,7 @@ export default function Home() {
   return (
     <div className="flex flex-col">
       <div className="text-2xl text-green-500 dark:text-yellow-800">This is the Home Page</div>
+      <Logo />
       <nav>
         <ul>
           <li>

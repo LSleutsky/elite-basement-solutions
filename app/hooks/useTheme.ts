@@ -27,8 +27,9 @@ export const useTheme = () => {
   }, [theme]);
 
   const toggle = useCallback(() => {
-    const next = getTheme() === "dark" ? "light" : "dark";
-    localStorage.setItem("theme", next);
+    const nextTheme = getTheme() === "dark" ? "light" : "dark";
+
+    localStorage.setItem("theme", nextTheme);
     window.dispatchEvent(new Event("storage"));
   }, []);
 
