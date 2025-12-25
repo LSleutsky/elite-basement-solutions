@@ -41,7 +41,21 @@ export default tseslint.config(
       ...react.configs["jsx-runtime"].rules,
       ...reactHooks.configs.recommended.rules,
       "prettier/prettier": "error",
-      "jsx-quotes": ["error", "prefer-double"]
+      "jsx-quotes": ["error", "prefer-double"],
+      "no-duplicate-case": "error",
+      "no-dupe-keys": "error",
+      "no-empty": "error",
+      "prefer-const": "error",
+      "react/jsx-no-undef": "error",
+      "react/jsx-sort-props": [
+        "error",
+        {
+          callbacksLast: true,
+          ignoreCase: true,
+          reservedFirst: true,
+          shorthandFirst: true
+        }
+      ]
     }
   },
   prettierConfig,

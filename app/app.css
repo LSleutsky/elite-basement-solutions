@@ -1,15 +1,57 @@
 @import "tailwindcss";
+
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-elite-teal: var(--elite-teal);
+  --color-elite-olive: var(--elite-olive);
+  --color-elite-brown: var(--elite-brown);
+  --color-elite-sage: var(--elite-sage);
+  --color-elite-charcoal: var(--elite-charcoal);
+  --color-elite-white: var(--elite-white);
+  --color-elite-light-gray: var(--elite-light-gray);
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-primary: var(--primary);
+  --color-muted: var(--muted);
+  --color-edge: var(--edge);
+}
+
+:root {
+  --elite-teal: #667d7d;
+  --elite-olive: #6d7a51;
+  --elite-brown: #493b2b;
+  --elite-sage: #a5af91;
+  --elite-charcoal: #313331;
+  --elite-white: #fafafa;
+  --elite-light-gray: #565e41;
+  --canvas: #f5f7f4;
+  --surface: #ffffff;
+  --primary: #1a1c1a;
+  --muted: #4a4d4a;
+  --edge: #e5ece2;
+}
+
+.dark {
+  --elite-teal: #7a9191;
+  --elite-olive: #8a9a6a;
+  --elite-brown: #5d4c3a;
+  --elite-sage: #c5d0b8;
+  --elite-charcoal: #242624;
+  --elite-white: #fafafa;
+  --elite-light-gray: #c1c5c8;
+  --canvas: #1a1c1a;
+  --surface: #242624;
+  --primary: #f5f7f4;
+  --muted: #a5af91;
+  --edge: #373b3b;
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
-
   @media (prefers-color-scheme: dark) {
     color-scheme: dark;
   }
