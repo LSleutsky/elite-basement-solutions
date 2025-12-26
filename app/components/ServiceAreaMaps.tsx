@@ -65,18 +65,6 @@ export const SoutheasternPennsylvania = ({ className }: MapProps) => {
         strokeWidth="1"
       />
       <path d={pennsylvania.philly} fill="#6d7a51" stroke="#0d0d0d" strokeWidth="1" />
-      <text fill="#fff" fontSize="8" fontWeight="500" textAnchor="middle" x="135" y="45">
-        Bucks
-      </text>
-      <text fill="#fff" fontSize="8" fontWeight="500" textAnchor="middle" x="105" y="60">
-        Montgomery
-      </text>
-      <text fill="#fff" fontSize="8" fontWeight="500" textAnchor="middle" x="60" y="90">
-        Chester
-      </text>
-      <text fill="#fff" fontSize="8" fontWeight="500" textAnchor="middle" x="103" y="102">
-        Delaware
-      </text>
     </svg>
   );
 };
@@ -120,10 +108,6 @@ export const NorthernDelaware = ({ className }: MapProps) => {
       {/* Kent and Sussex counties - faded */}
       <path d={delaware.kent} fill="#2a2a2a" stroke="#0d0d0d" strokeWidth="1" />
       <path d={delaware.sussex} fill="#2a2a2a" stroke="#0d0d0d" strokeWidth="1" />
-      {/* Label */}
-      <text fill="#fff" fontSize="10" fontWeight="500" textAnchor="middle" x="68" y="50">
-        New Castle
-      </text>
     </svg>
   );
 };
