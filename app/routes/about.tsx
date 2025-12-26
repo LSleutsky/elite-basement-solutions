@@ -117,9 +117,7 @@ export default function About() {
             className="group flex flex-col overflow-hidden rounded-2xl transition-transform hover:-translate-y-1"
             to={`/service-areas#${item.hash}`}
           >
-            <div className="flex flex-1 items-center justify-center bg-[#2a3535] p-4">
-              {item.map}
-            </div>
+            <div className="bg-map-bg flex flex-1 items-center justify-center p-4">{item.map}</div>
             <div className="bg-surface dark:bg-elite-charcoal p-4 text-center">
               <h3 className="text-primary group-hover:text-elite-teal font-semibold transition-colors">
                 {item.area}
