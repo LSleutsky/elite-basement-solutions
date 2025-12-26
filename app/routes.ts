@@ -4,7 +4,8 @@ export default [
   layout("./layout/main.tsx", [
     index("./routes/home.tsx"),
     route("about", "./routes/about.tsx"),
-    route("waterproofing", "./routes/waterproofing.tsx"),
-    route("mold-remediation", "./routes/mold-remediation.tsx")
+    route("mold-remediation", "./routes/mold-remediation.tsx"),
+    route("service-areas", "./routes/service-areas.tsx"),
+    route("waterproofing", "./routes/waterproofing.tsx")
   ])
 ] satisfies RouteConfig;

@@ -1,4 +1,4 @@
-import { Award, Check, Clock, MapPin, Shield, Users, Wrench } from "lucide-react";
+import { Award, Check, CheckCheck, Clock, Shield, Target, Users, Wrench } from "lucide-react";
 import { JSX } from "react";
 import { Link } from "react-router";
 
@@ -19,18 +19,21 @@ export function meta() {
   ];
 }
 
-const serviceAreas: { area: string; map: JSX.Element }[] = [
+const serviceAreas: { area: string; map: JSX.Element; hash: string }[] = [
   {
     area: "Pennsylvania",
-    map: <SoutheasternPennsylvania className="h-full w-full" />
+    map: <SoutheasternPennsylvania className="h-full w-full" />,
+    hash: "pennsylvania"
   },
   {
     area: "New Jersey",
-    map: <NewJersey className="h-full w-full" />
+    map: <NewJersey className="h-full w-full" />,
+    hash: "new-jersey"
   },
   {
     area: "Delaware",
-    map: <NorthernDelaware className="h-full w-full" />
+    map: <NorthernDelaware className="h-full w-full" />,
+    hash: "delaware"
   }
 ];
 
@@ -65,7 +68,10 @@ export default function About() {
             Tri-State area's most trusted name in basement services. Our commitment to
             quality craftsmanship and honest service has earned us `}
             <em>thousands</em>
-            {` of satisfied customers and a reputation that speaks for itself.`}
+            {` of satisfied customers and a reputation that speaks for itself. Everyone `}
+            <em>says</em>
+            {` they're the best, but when it's game-time, the difference between falling flat and actually delivering
+            is the only equalizer that matters.`}
           </p>
         </div>
         <div className="bg-elite-teal order-2 flex flex-col items-center justify-center rounded-2xl p-6 text-center">
@@ -100,20 +106,27 @@ export default function About() {
       </div>
       <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="bg-surface rounded-2xl p-6 lg:col-span-3">
-          <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">WHERE WE GO</p>
+          <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">SERVICE AREA</p>
           <h2 className="text-primary font-serif text-2xl md:text-3xl">
             Experts who care about your home
           </h2>
         </div>
         {serviceAreas.map((item) => (
-          <div key={item.area} className="flex flex-col overflow-hidden rounded-2xl">
+          <Link
+            key={item.area}
+            className="group flex flex-col overflow-hidden rounded-2xl transition-transform hover:-translate-y-1"
+            to={`/service-areas#${item.hash}`}
+          >
             <div className="flex flex-1 items-center justify-center bg-[#2a3535] p-4">
               {item.map}
             </div>
             <div className="bg-surface dark:bg-elite-charcoal p-4 text-center">
-              <h3 className="text-primary font-semibold">{item.area}</h3>
+              <h3 className="text-primary group-hover:text-elite-teal font-semibold transition-colors">
+                {item.area}
+              </h3>
+              <p className="text-muted mt-1 text-xs">View towns & zip codes</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -125,37 +138,70 @@ export default function About() {
             </div>
             <h3 className="text-primary text-lg font-semibold">Certifications & Licenses</h3>
           </div>
-          <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
-            {["EPA Certified", "PA Licensed", "OSHA Compliant", "BBB A+ Rated"].map((cert) => (
-              <div key={cert} className="bg-canvas rounded-xl p-3 text-center">
-                <p className="text-primary text-sm font-medium">{cert}</p>
-              </div>
+          <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+            {[
+              { name: "EPA", href: "https://www.epa.gov" },
+              { name: "OSHA", href: "https://www.osha.gov" },
+              { name: "NAWSRC", href: "https://basementhealth.org/industry/certifications/" },
+              { name: "MICRO", href: "https://www.moldcareer.com/" },
+              {
+                name: "CMRC",
+                href: "https://www.moldcareer.com/training-certification/4/5/195/MICRO-Certified-Mold-Remediation-Contractor-CMRC-Course/"
+              },
+              {
+                name: "CMI",
+                href: "https://indoorsciences.com/certifications/certified-microbial-investigator/"
+              },
+              {
+                name: "CHST",
+                href: "https://www.bcsp.org/construction-health-and-safety-technician-chst"
+              },
+              { name: "BHA / IAQ", href: "https://basementhealth.org/industry/certifications/" }
+            ].map((cert) => (
+              <a
+                key={cert.name}
+                className="bg-canvas hover:bg-elite-teal/10 hover:border-elite-teal/20 flex items-center justify-center rounded-xl border border-transparent p-3"
+                href={cert.href}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <p className="text-primary text-center text-sm font-medium">{cert.name}</p>
+              </a>
             ))}
           </div>
         </div>
-        {/* Service Area Card */}
-        <div className="bg-elite-olive rounded-2xl p-6 text-white">
+        {/* Core Values Card */}
+        <div className="bg-elite-olive text-elite-white rounded-2xl p-6">
           <div className="mb-4 flex items-center gap-3">
-            <MapPin className="h-6 w-6" />
-            <h3 className="text-lg font-semibold">Service Area</h3>
+            <Target className="h-8 w-8" />
+            <h3 className="text-lg font-semibold">Our Core Values</h3>
           </div>
-          <p className="mb-4 text-sm text-white/80">
-            Proudly serving the Tri-State area including:
-          </p>
           <ul className="space-y-1 text-sm text-white/90">
-            <li>Philadelphia</li>
-            <li>Bucks County</li>
-            <li>Montgomery County</li>
-            <li>Delaware County</li>
-            <li>Chester County</li>
-            <li>New Jersey</li>
-            <li>Northern Delaware</li>
+            <li className="flex items-start">
+              <CheckCheck className="mr-1 shrink-0" size={20} />
+              <span>Utmost Standards and Sustainability</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCheck className="mr-1 shrink-0" size={20} />
+              <span>Safety, Integrity, and Ethics</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCheck className="mr-1 shrink-0" size={20} />
+              <span>Work Within Budgets and Timelines</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCheck className="mr-1 shrink-0" size={20} />
+              <span>Experience, Passion, and Dedication</span>
+            </li>
+            <li className="flex items-start">
+              <CheckCheck className="mr-1 shrink-0" size={20} />
+              <span>Seamless Project Management</span>
+            </li>
           </ul>
         </div>
       </div>
-      {/* Why Choose Us Section */}
+      {/* Why Choose Us Card */}
       <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
-        {/* Large Image Card */}
         <div className="overflow-hidden rounded-2xl md:row-span-2">
           <img
             alt="Quality craftsmanship example"
@@ -189,7 +235,7 @@ export default function About() {
             </li>
           </ul>
         </div>
-        {/* Equipment Card */}
+        {/* Professional Equipment Card */}
         <div className="bg-surface rounded-2xl p-6">
           <div className="mb-4 flex items-center gap-3">
             <div className="bg-elite-teal/20 rounded-full p-3">
@@ -198,9 +244,10 @@ export default function About() {
             <h3 className="text-primary text-lg font-semibold">Professional Equipment</h3>
           </div>
           <p className="text-muted text-sm leading-relaxed">
-            We invest in the latest industry equipment and technology to ensure every job is done
+            {`We invest in the latest industry equipment and technology to ensure every job is done
             right the first time. From advanced moisture and mold detection, to commercial-grade
-            waterproofing systems.
+            waterproofing systems, you'll never need to worry about knock-offs masquerading as
+            brand names.`}
           </p>
         </div>
       </div>
@@ -208,7 +255,9 @@ export default function About() {
       <div className="mt-4">
         <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">
           <div>
-            <p className="text-lg font-medium text-white md:text-xl">Ready for peace of mind?</p>
+            <p className="text-lg font-medium text-white md:text-xl">
+              Ready for tranquility and peace of mind?
+            </p>
             <p className="text-sm text-white/60">Schedule your free consultation today</p>
           </div>
           <Link
