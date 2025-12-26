@@ -7,7 +7,7 @@ import ThemeToggle from "@/components/ThemeToggle";
 const navLinks = [
   { name: "Services", href: "/" },
   { name: "Projects", href: "/" },
-  { name: "About", href: "/" }
+  { name: "About", href: "about" }
 ];
 
 const trustItems = [
@@ -51,13 +51,13 @@ export default function Layout() {
             )}
           </button>
           <Logo className="h-7 w-7 md:h-8 md:w-8" variant="icon" />
-          <nav className="text-muted hidden items-center gap-6 text-sm md:flex">
+          <div className="text-muted hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
               <Link key={link.name} className="hover:text-primary transition-colors" to={link.href}>
                 {link.name}
               </Link>
             ))}
-          </nav>
+          </div>
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Link
@@ -108,7 +108,7 @@ export default function Layout() {
         <div className="mx-auto max-w-6xl rounded-2xl bg-[#0d0d0d] p-4 dark:bg-[#0a0a0a]">
           <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 px-2">
             {trustItems.map((item, index) => (
-              <span key={index} className="text-xs text-[#555] md:text-sm">
+              <span key={index} className="text-xs text-[#888] md:text-sm">
                 {item}
               </span>
             ))}
