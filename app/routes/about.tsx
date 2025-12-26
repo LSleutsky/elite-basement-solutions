@@ -98,8 +98,8 @@ export default function About() {
           </div>
         ))}
       </div>
-      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        <div className="bg-surface rounded-2xl p-6 md:col-span-2 lg:col-span-3">
+      <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
+        <div className="bg-surface rounded-2xl p-6 lg:col-span-3">
           <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">WHERE WE GO</p>
           <h2 className="text-primary font-serif text-2xl md:text-3xl">
             Experts who care about your home
