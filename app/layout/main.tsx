@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { Menu, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { Link, Outlet } from "react-router";
 
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
-  { name: "Services", href: "/" },
-  { name: "Projects", href: "/" },
+  { name: "Services", href: "services" },
+  { name: "Projects", href: "projects" },
   { name: "About", href: "about" }
 ];
 
@@ -18,37 +19,43 @@ const trustItems = [
 ];
 
 export default function Layout() {
+  const headerRef = useRef<HTMLElement>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.addEventListener("touchstart", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [mobileMenuOpen]);
 
   return (
     <div className="bg-canvas relative flex min-h-screen flex-col overflow-hidden">
-      <header className="sticky top-0 z-50 flex justify-center px-4 pt-4 md:pt-6">
-        <nav className="border-primary/10 bg-surface/80 flex w-full max-w-3xl items-center justify-between rounded-full border px-4 py-2 backdrop-blur-xl md:px-6 md:py-3">
+      <header
+        ref={headerRef}
+        className="sticky top-0 z-50 flex flex-col items-center px-4 pt-4 md:pt-6"
+      >
+        <nav
+          className={`border-primary/10 bg-surface/80 flex w-full max-w-3xl items-center justify-between border px-4 py-2 backdrop-blur-xl md:rounded-full md:px-6 md:py-3 ${mobileMenuOpen ? "rounded-t-2xl" : "rounded-full"}`}
+        >
           {/* Mobile menu button */}
           <button
             aria-label="Toggle menu"
             className="text-muted hover:text-primary p-1 md:hidden"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
-            {mobileMenuOpen ? (
-              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M6 18L18 6M6 6l12 12"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                />
-              </svg>
-            ) : (
-              <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  d="M4 6h16M4 12h16M4 18h16"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                />
-              </svg>
-            )}
+            {mobileMenuOpen ? <X /> : <Menu />}
           </button>
           <Logo className="h-7 w-7 md:h-8 md:w-8" variant="icon" />
           <div className="text-muted hidden items-center gap-6 md:flex">
@@ -75,32 +82,32 @@ export default function Layout() {
             </Link>
           </div>
         </nav>
-      </header>
-      {/* Mobile menu dropdown */}
-      {mobileMenuOpen && (
-        <div className="bg-surface/95 absolute top-16 right-4 left-4 z-40 rounded-2xl border border-white/10 p-4 backdrop-blur-xl md:hidden">
-          <div className="flex flex-col gap-2">
-            {navLinks.map((link) => (
+        {/* Mobile menu dropdown */}
+        {mobileMenuOpen && (
+          <div className="border-primary/10 bg-surface/95 w-full max-w-3xl rounded-b-2xl border-x border-b p-4 backdrop-blur-xl md:hidden">
+            <div className="flex flex-col gap-1">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.name}
+                  className="text-primary hover:bg-primary/5 rounded-xl px-4 py-3 text-sm font-medium transition-colors"
+                  to={link.href}
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="bg-primary/10 my-2 h-px" />
               <Link
-                key={link.name}
-                className="text-primary hover:bg-primary/5 rounded-lg px-4 py-3 text-sm font-medium transition-colors"
-                to={link.href}
+                className="bg-elite-teal rounded-xl px-4 py-3 text-center text-sm font-medium text-white"
+                to="/"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                {link.name}
+                Contact Us
               </Link>
-            ))}
-            <hr className="border-primary/10 my-2" />
-            <Link
-              className="bg-elite-teal rounded-full px-4 py-3 text-center text-sm font-medium text-white"
-              to="/"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              Contact Us
-            </Link>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </header>
       <main className="relative z-10 flex-1 px-4 py-6 md:px-8 md:py-10 md:pb-24">
         <Outlet />
       </main>

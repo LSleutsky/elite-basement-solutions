@@ -123,7 +123,6 @@ export const pennsylvaniaData: ServiceAreaData = {
         { name: "Morton", zips: ["19070"] },
         { name: "Newtown Square", zips: ["19073"] },
         { name: "Norwood", zips: ["19074"] },
-        { name: "Philadelphia", zips: ["19113"] },
         { name: "Pilgrim Gardens", zips: ["19026"] },
         { name: "Prospect Park", zips: ["19076"] },
         { name: "Ridley Park", zips: ["19078"] },

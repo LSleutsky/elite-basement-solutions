@@ -86,7 +86,6 @@ export default function About() {
           />
         </div>
       </div>
-      {/* Values Section */}
       <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
         {values.map((value) => (
           <div
@@ -128,7 +127,6 @@ export default function About() {
         ))}
       </div>
       <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {/* Certifications Card */}
         <div className="bg-surface rounded-2xl p-6 lg:col-span-2">
           <div className="mb-4 flex items-center gap-3">
             <div className="bg-elite-olive/20 rounded-full p-3">
@@ -140,7 +138,6 @@ export default function About() {
             {[
               { name: "EPA", href: "https://www.epa.gov" },
               { name: "OSHA", href: "https://www.osha.gov" },
-              { name: "NAWSRC", href: "https://basementhealth.org/industry/certifications/" },
               { name: "MICRO", href: "https://www.moldcareer.com/" },
               {
                 name: "CMRC",
@@ -154,7 +151,8 @@ export default function About() {
                 name: "CHST",
                 href: "https://www.bcsp.org/construction-health-and-safety-technician-chst"
               },
-              { name: "BHA / IAQ", href: "https://basementhealth.org/industry/certifications/" }
+              { name: "BHA", href: "https://basementhealth.org/industry/certifications/" },
+              { name: "IAQ", href: "https://www.iaqa.org/" }
             ].map((cert) => (
               <a
                 key={cert.name}
@@ -168,7 +166,6 @@ export default function About() {
             ))}
           </div>
         </div>
-        {/* Core Values Card */}
         <div className="bg-elite-olive text-elite-white rounded-2xl p-6">
           <div className="mb-4 flex items-center gap-3">
             <Target className="h-8 w-8" />
@@ -198,7 +195,6 @@ export default function About() {
           </ul>
         </div>
       </div>
-      {/* Why Choose Us Card */}
       <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
         <div className="overflow-hidden rounded-2xl md:row-span-2">
           <img
@@ -233,7 +229,6 @@ export default function About() {
             </li>
           </ul>
         </div>
-        {/* Professional Equipment Card */}
         <div className="bg-surface rounded-2xl p-6">
           <div className="mb-4 flex items-center gap-3">
             <div className="bg-elite-teal/20 rounded-full p-3">
@@ -249,7 +244,6 @@ export default function About() {
           </p>
         </div>
       </div>
-      {/* CTA Card */}
       <div className="mt-4">
         <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">
           <div>

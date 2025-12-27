@@ -6,6 +6,7 @@ export default [
     route("about", "./routes/about.tsx"),
     route("mold-remediation", "./routes/mold-remediation.tsx"),
     route("service-areas", "./routes/service-areas.tsx"),
+    route("services", "./routes/services.tsx"),
     route("waterproofing", "./routes/waterproofing.tsx")
   ])
 ] satisfies RouteConfig;

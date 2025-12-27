@@ -28,7 +28,6 @@ export default function Home() {
   return (
     <div className="mx-auto max-w-6xl pb-24 md:pb-0">
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-        {/* Logo Card */}
         <div className="bg-surface order-1 flex items-center justify-center rounded-2xl p-8 md:col-span-2 lg:col-span-1 lg:col-start-1 lg:row-span-3">
           <Logo
             className="h-auto w-full max-w-[280px] md:max-w-[300px] lg:max-w-[220px]"
@@ -36,7 +35,6 @@ export default function Home() {
             variant="full"
           />
         </div>
-        {/* Hero Text Block - spans full width on tablet, 2 cols and 2 rows on desktop */}
         <div className="bg-surface order-2 rounded-2xl p-6 md:col-span-2 md:p-8 lg:col-span-2 lg:col-start-2 lg:row-span-2">
           <p className="text-elite-teal mb-4 text-xs font-medium tracking-[0.2em] md:text-sm">
             HOME IMPROVEMENT EXPERTS
@@ -61,20 +59,17 @@ export default function Home() {
             </h1>
           </div>
         </div>
-        {/* Stats Card */}
         <div className="bg-elite-teal order-3 flex flex-col items-center justify-center rounded-2xl p-6 text-center lg:col-start-2">
           <span className="text-4xl font-semibold text-white md:text-5xl">
             {yearsOfExcellence}+
           </span>
           <p className="mt-2 text-sm text-white/80">Years of excellence</p>
         </div>
-        {/* Rating Card */}
         <div className="bg-surface order-4 flex flex-col items-center justify-center rounded-2xl p-6 text-center lg:col-start-3">
           <p className="text-muted mb-2 text-xs tracking-wider">GOOGLE REVIEWS</p>
           <span className="text-primary text-4xl font-medium">4.9</span>
           <p className="text-elite-olive mt-1 text-sm">★★★★★</p>
         </div>
-        {/* Service Pills Cards */}
         <div className="order-5 col-span-1 md:col-span-2 lg:col-span-3">
           <div className="grid grid-cols-2 gap-4">
             {services.map((service) => (
@@ -91,7 +86,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-        {/* CTA Card */}
         <div className="bg-elite-olive order-6 col-span-1 flex flex-col items-center justify-between gap-4 rounded-2xl p-5 md:col-span-2 md:flex-row lg:col-span-3">
           <p className="text-center text-sm font-medium text-white md:text-left md:text-base">
             {`Protect what matters. Transform what's possible.`}
@@ -182,7 +176,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        {/* Custom Solutions Card */}
+        {/* Custom Solutions */}
         <div className="relative overflow-hidden rounded-2xl bg-[#0d0d0d] p-6 md:col-span-2 lg:col-span-2">
           <div className="flex flex-col items-center justify-center gap-4 py-4 text-center md:flex-row md:justify-between md:text-left">
             <div>
