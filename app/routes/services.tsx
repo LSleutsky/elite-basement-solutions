@@ -99,7 +99,7 @@ export default function Services() {
         <div className="grid grid-cols-2 gap-4 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:grid-cols-1 lg:grid-rows-2">
           <div className="bg-elite-olive flex flex-col items-center justify-center rounded-2xl p-6 text-center">
             <Droplets className="mb-2 h-8 w-8 text-white/80" />
-            <span className="text-3xl font-semibold text-white">1,500+</span>
+            <span className="text-3xl font-semibold text-white">1,000+</span>
             <p className="mt-1 text-sm text-white/80">Basements waterproofed</p>
           </div>
           <div className="bg-surface flex items-center justify-center rounded-2xl p-6">
@@ -170,8 +170,8 @@ export default function Services() {
           <h2 className="text-primary mb-3 font-serif text-2xl md:text-3xl">Home Remodeling</h2>
           <p className="text-muted mb-6 max-w-xl text-base leading-relaxed md:text-lg">
             {`Your basement has untapped potential. Whether you envision a home theater, gym, office,
-              or extra living space, we bring your vision to life with expert craftsmanship and
-              attention to every detail. No project is too big or too small.`}
+              or extra living space, we bring your vision to life with expert know-how and
+              attention to every minute detail. No project is too big or too small.`}
           </p>
           <ul className="mb-6 grid gap-2 sm:grid-cols-2">
             {remodelingFeatures.map((feature) => (
