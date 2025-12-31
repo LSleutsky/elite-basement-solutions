@@ -1,5 +1,4 @@
 import {
-  AlertTriangle,
   ArrowRight,
   BrickWall,
   Check,
@@ -10,11 +9,10 @@ import {
   PipetteIcon,
   Proportions,
   ShieldCheck,
-  Shovel,
   Toolbox,
   Waves,
   WavesArrowDown,
-  Wrench
+  WindArrowDown
 } from "lucide-react";
 import { Link } from "react-router";
 
@@ -64,7 +62,7 @@ export default function WaterproofingPage() {
         <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2">
           <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">WATERPROOFING</p>
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
-            Stop water at the source. Protect what matters.
+            Stop water at the source. Protect what you value.
           </h1>
           <p className="text-muted mt-4 text-base md:text-lg">
             Water is the second strongest force on Earth. You cannot stop it, but you can manage it.
@@ -79,18 +77,14 @@ export default function WaterproofingPage() {
       </header>
       {/* Understanding Water Seepage */}
       <section className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <div className="bg-surface flex items-center justify-center rounded-2xl p-6 lg:col-start-1 lg:row-start-1">
-          <div className="flex items-center gap-3">
-            <div className="bg-elite-olive/20 rounded-full p-3">
-              <AlertTriangle className="text-elite-olive h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-primary font-semibold">5 Entry Points</h3>
-              <p className="text-muted text-sm">Where water gets in</p>
-            </div>
-          </div>
+        <div className="bg-surface order-2 overflow-hidden rounded-2xl lg:order-0 lg:col-start-1 lg:row-start-1">
+          <img
+            alt="Water entry points in basement"
+            className="h-full w-full object-cover"
+            src="/public/water-seepage.jpg"
+          />
         </div>
-        <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2">
+        <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2">
           <div className="bg-elite-teal/20 mb-4 inline-flex rounded-full p-3">
             <Droplets className="text-elite-teal h-6 w-6" />
           </div>
@@ -147,8 +141,10 @@ export default function WaterproofingPage() {
       <section className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="grid grid-cols-2 gap-4 lg:col-start-1 lg:row-span-2 lg:row-start-1 lg:grid-cols-1 lg:grid-rows-2">
           <div className="bg-elite-olive flex flex-col items-center justify-center rounded-2xl p-6 text-center">
-            <span className="text-3xl font-semibold text-white">1,000+</span>
-            <p className="mt-1 text-sm text-white/80">Systems installed</p>
+            <WindArrowDown className="mb-2 h-8 w-8 text-white/80" />
+            <span className="text-3xl font-semibold text-white">2,000 lbs</span>
+            <p className="mt-1 text-sm text-white/60">Pressure per sq. ft.</p>
+            <p className="mt-1 text-xs text-white/60">Hydrostatic force on your foundation</p>
           </div>
           <div className="bg-surface flex items-center justify-center rounded-2xl p-6">
             <div className="flex items-center gap-3">
@@ -237,18 +233,14 @@ export default function WaterproofingPage() {
       </section>
       {/* Outside Drainage */}
       <section className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <div className="bg-surface flex items-center justify-center rounded-2xl p-6 lg:col-start-1 lg:row-start-1">
-          <div className="flex items-center gap-3">
-            <div className="bg-elite-teal/20 rounded-full p-3">
-              <Shovel className="text-elite-teal h-6 w-6" />
-            </div>
-            <div>
-              <h3 className="text-primary font-semibold">Gravity Drainage</h3>
-              <p className="text-muted text-sm">No pumps required when possible</p>
-            </div>
-          </div>
+        <div className="order-2 overflow-hidden rounded-2xl lg:order-0 lg:col-start-1 lg:row-start-1">
+          <img
+            alt="Outside drainage system"
+            className="h-full w-full object-cover"
+            src="/public/gravity-drain.jpg"
+          />
         </div>
-        <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2">
+        <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2">
           <div className="bg-elite-teal/20 mb-4 inline-flex rounded-full p-3">
             <BrickWall className="text-elite-teal h-6 w-6" />
           </div>
@@ -289,10 +281,12 @@ export default function WaterproofingPage() {
           </div>
         </div>
         <div className="grid grid-cols-2 gap-4 lg:row-span-2 lg:grid-cols-1 lg:grid-rows-2">
-          <div className="flex flex-col items-center justify-center rounded-2xl bg-[#0d0d0d] p-6 text-center">
-            <Wrench className="mb-2 h-8 w-8 text-white/80" />
-            <span className="text-3xl font-semibold text-white">6</span>
-            <p className="mt-1 text-sm text-white/60">Repair methods</p>
+          <div className="overflow-hidden rounded-2xl">
+            <img
+              alt="Foundation crack repair"
+              className="h-full w-full object-cover"
+              src="/public/crack-repair.jpg"
+            />
           </div>
           <div className="bg-surface flex items-center justify-center rounded-2xl p-6">
             <div className="flex items-center gap-3">
