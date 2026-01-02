@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Link, Outlet } from "react-router";
 
+import CommandPalette from "@/components/CommandPalette";
 import Logo from "@/components/Logo";
 import ThemeToggle from "@/components/ThemeToggle";
 
@@ -42,6 +43,7 @@ export default function Layout() {
 
   return (
     <div className="bg-canvas relative flex min-h-screen flex-col overflow-hidden">
+      <CommandPalette />
       <header
         ref={headerRef}
         className="sticky top-0 z-50 flex flex-col items-center px-4 pt-4 md:pt-6"

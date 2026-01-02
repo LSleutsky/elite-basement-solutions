@@ -16,6 +16,7 @@ import {
   Sofa,
   Sparkles,
   Timer,
+  Toilet,
   Wrench
 } from "lucide-react";
 import { Link } from "react-router";
@@ -286,7 +287,7 @@ export default function HomeRemodeling() {
       <section className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2 lg:row-span-2">
           <div className="bg-elite-olive/20 mb-4 inline-flex rounded-full p-4">
-            <PaintBucket className="text-elite-olive h-8 w-8" />
+            <Toilet className="text-elite-olive h-8 w-8" />
           </div>
           <h2 className="text-primary mb-3 font-serif text-2xl md:text-3xl">Bathroom Upgrades</h2>
           <p className="text-muted mb-6 text-base leading-relaxed md:text-lg">
