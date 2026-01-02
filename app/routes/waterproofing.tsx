@@ -4,7 +4,6 @@ import {
   Check,
   Droplets,
   Gauge,
-  Hammer,
   Layers,
   PipetteIcon,
   Proportions,
@@ -242,7 +241,7 @@ export default function WaterproofingPage() {
         </div>
         <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2">
           <div className="bg-elite-teal/20 mb-4 inline-flex rounded-full p-3">
-            <BrickWall className="text-elite-teal h-6 w-6" />
+            <Droplets className="text-elite-teal h-6 w-6" />
           </div>
           <h2 className="text-primary mb-3 font-serif text-2xl md:text-3xl">Outside Drainage</h2>
           <p className="text-muted mb-4 text-base leading-relaxed">
@@ -261,7 +260,7 @@ export default function WaterproofingPage() {
       <section className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2 lg:col-start-1 lg:row-span-2 lg:row-start-1">
           <div className="bg-elite-olive/20 mb-4 inline-flex rounded-full p-3">
-            <Hammer className="text-elite-olive h-6 w-6" />
+            <BrickWall className="text-elite-olive h-6 w-6" />
           </div>
           <h2 className="text-primary mb-3 font-serif text-2xl md:text-3xl">
             Foundation & Crack Repair

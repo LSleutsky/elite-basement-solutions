@@ -6,6 +6,7 @@ import {
   FileText,
   Home,
   HousePlus,
+  Library,
   Map,
   Mail,
   Search,
@@ -41,6 +42,12 @@ const pages = [
     href: "/service-areas",
     icon: Map,
     keywords: ["maps", "locations", "regions", "coverage", "where we go", "where we work"]
+  },
+  {
+    name: "Resources",
+    href: "/resources",
+    icon: Library,
+    keywords: ["knowledge", "faq", "learn", "glossary", "terms", "help", "guide"]
   },
   {
     name: "Contact",

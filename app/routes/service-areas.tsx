@@ -268,7 +268,7 @@ export default function ServiceAreas() {
             />
             {searchQuery && (
               <button
-                className="text-muted hover:text-primary absolute top-1/2 right-4 -translate-y-1/2"
+                className="text-muted hover:text-primary absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer"
                 onClick={() => {
                   setSearchQuery("");
                   setShowResults(false);

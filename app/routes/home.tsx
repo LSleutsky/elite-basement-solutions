@@ -1,4 +1,4 @@
-import { ArrowRight, Biohazard, Check, CloudRain, HousePlus } from "lucide-react";
+import { ArrowRight, Biohazard, Check, CloudRain, HousePlus, Library } from "lucide-react";
 import { Link } from "react-router";
 
 import Logo from "@/components/Logo";
@@ -193,6 +193,27 @@ export default function Home() {
             </Link>
           </div>
         </div>
+      </div>
+      <div className="mt-4">
+        <Link
+          className="bg-surface group hover:bg-surface/80 flex items-center justify-between gap-4 rounded-2xl p-6 transition-colors"
+          to="/resources"
+        >
+          <div className="flex items-center gap-4">
+            <div className="bg-elite-teal/20 rounded-full p-3">
+              <Library className="text-elite-teal h-6 w-6" />
+            </div>
+            <div>
+              <h3 className="text-primary font-semibold">
+                Visit Our Knowledge Base Learning center
+              </h3>
+              <p className="text-muted text-sm">FAQs, guides, and expert tips for home care</p>
+            </div>
+          </div>
+          <span className="text-elite-teal flex items-center justify-center text-sm font-medium">
+            Explore <ArrowRight className="mt-0.5" size={16} />
+          </span>
+        </Link>
       </div>
     </div>
   );

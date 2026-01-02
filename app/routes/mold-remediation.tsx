@@ -170,8 +170,8 @@ export default function MoldRemediationPage() {
           </p>
           <p className="text-muted mb-6 text-base leading-relaxed">
             Our crew sets up containment around the affected area. A negative air machine prevents
-            spores from spreading to uncontaminated areas. Everything containing mold is
-            removed—sheetrock, carpeting, furniture. All surfaces are HEPA vacuumed and treated with
+            spores from spreading to uncontaminated areas. Everything containing mold is removed -
+            sheetrock, carpeting, furniture. All surfaces are HEPA vacuumed and treated with
             anti-fungal solutions.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -203,7 +203,7 @@ export default function MoldRemediationPage() {
             Mold wants to breed. It wants to spread. A dark, damp environment is the ideal breeding
             ground. Combine that with the fact that most mold is invisible, and your house may be
             hosting an entire ecosystem you cannot see. It is your job to prevent that from
-            happening—permanently.
+            happening, permanently.
           </p>
         </div>
         <div className="bg-surface flex items-center justify-center rounded-2xl p-6">
@@ -243,8 +243,8 @@ export default function MoldRemediationPage() {
           <p className="text-muted text-base leading-relaxed">
             The mold will continue to grow, breed, and spread rapidly until something destroys the
             actual mold, eliminates the food source, and removes the toxic environment. Mold is not
-            prejudiced—whether your house was built in 1903 or 2023, if you have a moisture problem,
-            you will find mold.
+            prejudiced - whether your house was built in 1903 or 2023, if you have a moisture
+            problem, you will find mold.
           </p>
         </div>
       </section>

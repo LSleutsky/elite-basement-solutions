@@ -1,4 +1,15 @@
-import { Award, Check, CheckCheck, Clock, Shield, Target, Users, Wrench } from "lucide-react";
+import {
+  ArrowRight,
+  Award,
+  Check,
+  CheckCheck,
+  Clock,
+  Library,
+  Shield,
+  Target,
+  Users,
+  Wrench
+} from "lucide-react";
 import { JSX } from "react";
 import { Link } from "react-router";
 
@@ -243,6 +254,27 @@ export default function About() {
             brand names.`}
           </p>
         </div>
+      </div>
+      <div className="mt-4">
+        <Link
+          className="bg-surface group hover:bg-surface/80 flex items-center justify-between gap-4 rounded-2xl p-6 transition-colors"
+          to="/resources"
+        >
+          <div className="flex items-center gap-4">
+            <div className="bg-elite-teal/20 rounded-full p-3">
+              <Library className="text-elite-teal h-6 w-6" />
+            </div>
+            <div>
+              <h3 className="text-primary font-semibold">Knowledge Base & Resources</h3>
+              <p className="text-muted text-sm">
+                Learn about waterproofing, mold prevention, and proper home care
+              </p>
+            </div>
+          </div>
+          <span className="text-elite-teal flex items-center justify-center text-sm font-medium">
+            Explore <ArrowRight className="mt-0.5" size={16} />
+          </span>
+        </Link>
       </div>
       <div className="mt-4">
         <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">
