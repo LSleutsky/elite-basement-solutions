@@ -24,7 +24,9 @@
     "morgan": "^1.10.1",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
-    "react-router": "7.10.1"
+    "react-photo-album": "^3.4.0",
+    "react-router": "7.10.1",
+    "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

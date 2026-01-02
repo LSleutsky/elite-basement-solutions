@@ -6,6 +6,7 @@ import {
   FileText,
   Home,
   HousePlus,
+  Images,
   Library,
   Map,
   Mail,
@@ -18,7 +19,6 @@ import { useNavigate } from "react-router";
 const pages = [
   { name: "Home", href: "/", icon: Home, keywords: ["start", "main", "landing"] },
   { name: "About", href: "/about", icon: BookOpenText, keywords: ["about", "who we are"] },
-  { name: "Services", href: "/services", icon: FileText, keywords: ["what we do", "offerings"] },
   {
     name: "Waterproofing",
     href: "/waterproofing",
@@ -36,6 +36,12 @@ const pages = [
     href: "/home-remodeling",
     icon: HousePlus,
     keywords: ["renovation", "remodel", "basement finishing", "kitchen", "bathroom"]
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+    icon: Images,
+    keywords: ["gallery", "photos", "pictures", "portfolio", "work", "examples"]
   },
   {
     name: "Service Areas",
