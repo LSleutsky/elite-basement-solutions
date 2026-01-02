@@ -163,14 +163,14 @@ export default function Home() {
             <div className="bg-elite-teal/20 mb-4 inline-flex rounded-full p-3">
               <HousePlus className="text-elite-olive" />
             </div>
-            <h3 className="text-primary mb-2 text-xl font-semibold">Remodeling</h3>
+            <h3 className="text-primary mb-2 text-xl font-semibold">Home Remodeling</h3>
             <p className="text-muted mb-4 leading-relaxed">
               Transform your basement into a beautiful living space. Full renovations, custom
               finishes.
             </p>
             <Link
               className="text-elite-teal inline-flex items-center gap-1 text-sm font-medium"
-              to="/remodeling"
+              to="/home-remodeling"
             >
               Learn more <ArrowRight size={16} />
             </Link>
