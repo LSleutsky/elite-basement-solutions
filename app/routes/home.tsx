@@ -3,6 +3,8 @@ import { Link } from "react-router";
 
 import Logo from "@/components/Logo";
 
+import { getYearsOfExperience } from "@/utils";
+
 export function meta() {
   return [
     { title: "Elite Basement Solutions" },
@@ -15,14 +17,7 @@ const services = [
   { name: "Commercial", description: "Certified & safe", href: "/mold-remediation" }
 ];
 
-// May 1st, 1987
-const FOUNDED_DATE = new Date(1987, 4, 1);
-const now = new Date();
-
-const yearsOfExcellence =
-  now.getFullYear() -
-  FOUNDED_DATE.getFullYear() -
-  (now < new Date(now.getFullYear(), 4, 1) ? 1 : 0);
+const yearsOfExcellence = getYearsOfExperience();
 
 export default function Home() {
   return (
@@ -90,7 +85,7 @@ export default function Home() {
           </p>
           <Link
             className="rounded-full bg-white px-5 py-2 text-sm font-medium text-[#6d7a51] transition-opacity hover:opacity-90"
-            to="/"
+            to="/contact"
           >
             Start →
           </Link>

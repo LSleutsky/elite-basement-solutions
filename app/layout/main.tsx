@@ -71,7 +71,7 @@ export default function Layout() {
             <ThemeToggle />
             <Link
               className="bg-elite-teal hidden rounded-full px-4 py-1.5 text-sm text-white transition-opacity hover:opacity-90 md:block"
-              to="/"
+              to="/contact"
             >
               Contact
             </Link>
@@ -101,7 +101,7 @@ export default function Layout() {
               <div className="bg-primary/10 my-2 h-px" />
               <Link
                 className="bg-elite-teal rounded-xl px-4 py-3 text-center text-sm font-medium text-white"
-                to="/"
+                to="/contact"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact Us
