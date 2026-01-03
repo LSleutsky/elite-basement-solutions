@@ -45,13 +45,11 @@ export default function Home() {
               <span className="text-primary">basements </span>
               <span className="text-elite-teal">beautiful.</span>
             </h1>
-            <div className="bg-elite-teal/20 h-px w-16 md:w-24" />
             <h1 className="font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
               <span className="text-primary">We make </span>
               <span className="text-primary">homes </span>
               <span className="text-elite-teal">healthy.</span>
             </h1>
-            <div className="bg-elite-olive/20 h-px w-16 md:w-24" />
             <h1 className="font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
               <span className="text-primary">We make </span>
               <span className="text-primary">spaces </span>
