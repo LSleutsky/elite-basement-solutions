@@ -129,7 +129,7 @@ export default function CommandPalette() {
       {/* Desktop floating button */}
       <button
         aria-label="Open navigation (⌘K)"
-        className="bg-surface/90 border-primary/10 text-muted hover:text-primary hover:bg-surface fixed right-8 bottom-8 z-50 hidden items-center gap-2 rounded-full border px-4 py-2.5 shadow-lg backdrop-blur-sm transition-all hover:scale-105 md:flex"
+        className="bg-surface/90 border-primary/10 text-muted hover:text-primary hover:bg-surface fixed right-8 bottom-8 z-50 hidden cursor-pointer items-center gap-2 rounded-full border px-4 py-2.5 shadow-lg backdrop-blur-sm transition-all hover:scale-105 md:flex"
         onClick={() => setOpen(true)}
       >
         <Command size={18} />
@@ -138,7 +138,7 @@ export default function CommandPalette() {
       {/* Mobile floating button */}
       <button
         aria-label="Open navigation"
-        className="bg-elite-teal fixed right-4 bottom-24 z-40 flex rounded-full p-3.5 shadow-xl shadow-black/30 transition-all active:scale-95 md:hidden"
+        className="bg-elite-teal fixed right-4 bottom-24 z-40 flex cursor-pointer! rounded-full p-3.5 shadow-xl shadow-black/30 transition-all active:scale-95 md:hidden"
         onClick={() => setOpen(true)}
       >
         <Search className="text-white" size={22} />

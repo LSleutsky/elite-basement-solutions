@@ -205,7 +205,7 @@ export default function Home() {
             </div>
             <div>
               <h3 className="text-primary font-semibold">
-                Visit Our Knowledge Base Learning center
+                Visit Our Knowledge Base Learning Center
               </h3>
               <p className="text-muted text-sm">FAQs, guides, and expert tips for home care</p>
             </div>

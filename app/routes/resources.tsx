@@ -140,6 +140,62 @@ const knowledgeBase: KnowledgeItem[] = [
       "Never finish a basement without addressing moisture first. Finished walls and floor coverings trap moisture, which accumulates and breeds mold within days. Even minor dampness behind drywall leads to hidden mold growth and ruined finishes. A typical basement remodel costs $10,000+. Protect that investment by sealing all moisture sources before any finishing work begins.",
     category: "waterproofing"
   },
+  {
+    id: "footer",
+    term: "Footer / Footing",
+    definition:
+      "The footer is the concrete base your entire house sits on. When builders dig the hole for your home, the footer is the first component poured. The foundation walls are built on top of the footer, and the entire weight of the house rests on it. Keeping the footer structurally sound and properly drained is essential for long-term stability.",
+    category: "waterproofing"
+  },
+  {
+    id: "water-management",
+    term: "Water Management",
+    definition:
+      "The process of keeping your home dry by controlling water rather than fighting it. Water is one of the strongest forces on Earth, so the goal is to manage it and allow it to run its natural course through a proper drainage system, then discharge it away from your home. This process continues automatically any time water tries to enter.",
+    category: "waterproofing"
+  },
+  {
+    id: "micro-drain",
+    term: "Micro Drain",
+    definition:
+      "A 1-inch drain typically installed around water heaters, water softeners, oil tanks, and other basement equipment where full-size drainage pipe cannot fit. The micro drain captures any water that may leak from these units and diverts it into the main drainage system, preventing puddling on the floor.",
+    category: "waterproofing"
+  },
+  {
+    id: "lateral-drain",
+    term: "Lateral Drain",
+    definition:
+      "A perimeter drainage system goes around the basement walls, but if water seeps through the center of the floor or areas away from the cove joint, a lateral drain is needed. It runs across the middle of the floor (or wherever water penetration occurs) and connects to the main drainage system.",
+    category: "waterproofing"
+  },
+  {
+    id: "threshold-drain",
+    term: "Threshold Drain",
+    definition:
+      "A 4-inch grated drain installed in front of sliding doors, bilco doors, or other entry points where a full waterproofing system cannot fit. The grate collects water before it enters the living space and diverts it to the drainage system.",
+    category: "waterproofing"
+  },
+  {
+    id: "sump-pit",
+    term: "Sump Pit",
+    definition:
+      "A container placed in a designated area of the basement that houses the sump pumps. The pit collects water from the perimeter drainage system. When water reaches a certain level, the pump activates and discharges the water away from the home. Properly sized pits prevent pumps from cycling too frequently.",
+    category: "waterproofing"
+  },
+  {
+    id: "downspout-extensions",
+    term: "Downspout Extensions",
+    definition:
+      "Pipes attached to the end of gutter downspouts that extend the discharge point away from your foundation. Typically made of flexible black ADS pipe, they can be routed around landscaping to find the best discharge location. Water should discharge at least 10 feet from the foundation to prevent it from cycling back.",
+    category: "waterproofing"
+  },
+  {
+    id: "swales",
+    term: "Swales",
+    definition:
+      "A swale is a shallow, low tract of land designed to manage water runoff and direct it away from structures. Properly graded swales steer surface water away from your foundation before it has a chance to soak into the soil and create hydrostatic pressure against your basement walls.",
+    category: "waterproofing"
+  },
   // Foundation & Crack Repair
   {
     id: "foundation-types",
@@ -202,6 +258,41 @@ const knowledgeBase: KnowledgeItem[] = [
     term: "V-Grooving",
     definition:
       "A crack repair technique where the crack is widened into a V-shape using a grinder or chisel. This removes loose material and creates better surface area for the repair compound to bond. The groove is then filled with hydraulic cement or patching compound for a lasting repair.",
+    category: "foundation"
+  },
+  {
+    id: "bowed-walls",
+    term: "Bowed Walls",
+    definition:
+      "Walls that curve inward due to hydrostatic pressure from water-saturated soil pushing against the foundation. When water builds up behind a block foundation, the wall can develop a visible bow or bulge. In extreme cases, foundations can collapse from this pressure if not addressed within a reasonable timeframe.",
+    category: "foundation"
+  },
+  {
+    id: "lolly-columns",
+    term: "Lolly Columns",
+    definition:
+      "Support columns spread throughout the basement that, along with the foundation walls, bear the weight of the home from the first floor up. These steel posts rest on the footer and support main beams. Damaged or corroded lolly columns can compromise structural integrity and may need replacement or reinforcement.",
+    category: "foundation"
+  },
+  {
+    id: "loose-soil",
+    term: "Loose Soil",
+    definition:
+      "When ground becomes saturated over time, the soil surrounding your house loosens and shifts, creating easier pathways for water to reach your foundation. As water hits the foundation, it builds pressure and causes further soil shifting, creating a worsening cycle that continues until professionally addressed.",
+    category: "foundation"
+  },
+  {
+    id: "drylok",
+    term: "DRYLOK and Sealers",
+    definition:
+      "DRYLOK is a common moisture-resistant paint/sealer used on basement walls. While it provides a clean finish and resists some dampness, it is not a substitute for true waterproofing. Sealers like DRYLOK work best on above-grade areas with minor moisture, not basements with active water intrusion or hydrostatic pressure.",
+    category: "foundation"
+  },
+  {
+    id: "expansion-joints",
+    term: "Expansion Control Joints",
+    definition:
+      "Joints placed into concrete slabs at strategic locations to control where cracking occurs. As concrete expands and contracts with temperature changes, stress concentrates at these joints rather than causing random cracks. While not a complete safeguard, they help minimize and control cracking patterns.",
     category: "foundation"
   },
   // Mold Remediation
