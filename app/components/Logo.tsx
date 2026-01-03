@@ -16,7 +16,7 @@ const IconLogo = ({ className = "h-8 w-8" }: IconLogoProps) => {
     <svg
       aria-label="Elite Basement Solutions"
       className={className}
-      viewBox="340 170 550 480"
+      viewBox="335 185 555 460"
       xmlns="http://www.w3.org/2000/svg"
     >
       {/* House, trees, ground, leaves, waves - icon only */}

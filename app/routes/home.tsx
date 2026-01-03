@@ -30,7 +30,7 @@ export default function Home() {
       <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
         <div className="bg-surface order-1 flex items-center justify-center rounded-2xl p-8 md:col-span-2 lg:col-span-1 lg:col-start-1 lg:row-span-3">
           <Logo
-            className="h-auto w-full max-w-[380px] md:max-w-[420px] lg:max-w-[340px]"
+            className="h-auto w-full max-w-[440px] md:max-w-[480px] lg:max-w-[400px]"
             linkToHome={false}
             variant="full"
           />

@@ -59,7 +59,7 @@ export default function Layout() {
           >
             {mobileMenuOpen ? <X /> : <Menu />}
           </button>
-          <Logo className="h-7 w-7 md:h-8 md:w-8" variant="icon" />
+          <Logo className="h-9 w-9 md:h-10 md:w-10" variant="icon" />
           <div className="text-muted hidden items-center gap-6 md:flex">
             {navLinks.map((link) => (
               <Link key={link.name} className="hover:text-primary transition-colors" to={link.href}>
