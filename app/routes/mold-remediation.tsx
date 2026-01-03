@@ -65,6 +65,7 @@ export default function MoldRemediationPage() {
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
             Eliminate the threat. Restore healthy air.
           </h1>
+          <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
             Mold is a living organism that thrives in your home. What you see is only 15% of the
             problem. Our certified technicians eliminate mold at the source and rejuvenate your

@@ -699,6 +699,7 @@ export default function Resources() {
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
             Resources & FAQs
           </h1>
+          <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
             Everything you need to understand basement waterproofing, mold remediation, foundation
             repair, and home remodeling. Search our knowledge base or browse by category.

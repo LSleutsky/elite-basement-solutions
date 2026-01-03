@@ -179,6 +179,7 @@ export default function Projects() {
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
             Project Gallery
           </h1>
+          <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
             Browse through our completed projects across waterproofing, mold remediation, foundation
             repair, and home remodeling. Each project showcases our commitment to quality

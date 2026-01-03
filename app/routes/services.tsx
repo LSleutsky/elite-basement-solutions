@@ -59,6 +59,7 @@ export default function Services() {
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
             Expert services for every basement need
           </h1>
+          <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
             From keeping water out to transforming your dream space, we deliver proven quality
             craftsmanship backed by decades of experience.

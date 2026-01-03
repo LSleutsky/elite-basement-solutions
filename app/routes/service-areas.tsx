@@ -235,9 +235,10 @@ export default function ServiceAreas() {
       <header className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="bg-surface rounded-2xl p-6 lg:col-span-2">
           <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">SERVICE AREAS</p>
-          <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl">
+          <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
             Towns & Zip Codes We Serve
           </h1>
+          <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base">
             Elite Basement Solutions proudly serves the Tri-State area. Find your town below to
             confirm we service your location.

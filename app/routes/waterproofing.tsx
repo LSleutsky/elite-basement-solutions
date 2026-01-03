@@ -63,6 +63,7 @@ export default function WaterproofingPage() {
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
             Stop water at the source. Protect what you value.
           </h1>
+          <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
             Water is the second strongest force on Earth. You cannot stop it, but you can manage it.
             Our pressure relief systems divert water away from your home permanently.
