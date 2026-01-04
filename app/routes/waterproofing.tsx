@@ -342,7 +342,9 @@ export default function WaterproofingPage() {
       </section>
       <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">
         <div>
-          <p className="text-lg font-medium text-white md:text-xl">Water problems getting worse?</p>
+          <p className="text-center text-lg font-medium text-white md:text-left md:text-xl">
+            Water problems getting worse?
+          </p>
           <p className="text-sm text-white/60">Get a free inspection and custom solution design</p>
         </div>
         <Link

@@ -70,17 +70,10 @@ export default function Layout() {
           <div className="flex items-center gap-2">
             <ThemeToggle />
             <Link
-              className="bg-elite-teal hidden rounded-full px-4 py-1.5 text-sm text-white transition-opacity hover:opacity-90 md:block"
+              className="bg-elite-teal rounded-full px-4 py-1.5 text-sm text-white transition-opacity hover:opacity-90"
               to="/contact"
             >
               Contact
-            </Link>
-            {/* Mobile call button */}
-            <Link
-              className="bg-elite-teal rounded-full px-3 py-1 text-xs text-white md:hidden"
-              to="tel:2155550123"
-            >
-              Call
             </Link>
           </div>
         </nav>

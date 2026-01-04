@@ -327,7 +327,9 @@ export default function MoldRemediationPage() {
       <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">
         <div>
           <p className="text-lg font-medium text-white md:text-xl">Suspect mold in your home?</p>
-          <p className="text-sm text-white/60">Get a professional inspection</p>
+          <p className="text-center text-sm text-white/60 md:text-left">
+            Get a professional inspection
+          </p>
         </div>
         <Link
           className="bg-elite-olive inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"

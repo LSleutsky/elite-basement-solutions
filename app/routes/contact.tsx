@@ -10,9 +10,11 @@ import {
   MapPin,
   MessageSquare,
   Phone,
+  RotateCcw,
   Send,
   Shield,
   User,
+  UserPen,
   Users,
   Wrench
 } from "lucide-react";
@@ -41,6 +43,7 @@ export function meta() {
 
 type FormData = {
   firstName: string;
+  lastName: string;
   spouseName: string;
   streetAddress: string;
   city: string;
@@ -71,6 +74,7 @@ export default function ContactPage() {
 
   const [formData, setFormData] = useState<FormData>({
     firstName: "",
+    lastName: "",
     spouseName: "",
     streetAddress: "",
     city: "",
@@ -90,22 +94,28 @@ export default function ContactPage() {
 
     switch (name) {
       case "firstName":
+      case "lastName":
       case "spouseName":
       case "streetAddress":
       case "city":
         formattedValue = capitalizeWords(value);
+
         break;
       case "state":
         formattedValue = value.toUpperCase().slice(0, 2);
+
         break;
       case "zipCode":
         formattedValue = value.replace(/\D/g, "").slice(0, 5);
+
         break;
       case "phone":
         formattedValue = formatPhoneNumber(value);
+
         break;
       case "comments":
         formattedValue = capitalizeFirst(value);
+
         break;
     }
 
@@ -120,7 +130,11 @@ export default function ContactPage() {
     const newErrors: FormErrors = {};
 
     if (!formData.firstName.trim() || !/[a-zA-Z]/.test(formData.firstName)) {
-      newErrors.firstName = "First name is required and must contain at least one letter";
+      newErrors.firstName = "First name is required";
+    }
+
+    if (!formData.lastName.trim() || !/[a-zA-Z]/.test(formData.lastName)) {
+      newErrors.lastName = "Last name is required";
     }
 
     if (!formData.streetAddress.trim()) {
@@ -153,10 +167,6 @@ export default function ContactPage() {
       newErrors.phone = "Please enter a valid 10-digit phone number";
     }
 
-    if (!formData.service) {
-      newErrors.service = "Please select a service";
-    }
-
     setErrors(newErrors);
 
     return Object.keys(newErrors).length === 0;
@@ -176,6 +186,23 @@ export default function ContactPage() {
 
     setIsSubmitting(false);
     setIsSubmitted(true);
+  };
+
+  const handleClear = () => {
+    setFormData({
+      firstName: "",
+      lastName: "",
+      spouseName: "",
+      streetAddress: "",
+      city: "",
+      state: "",
+      zipCode: "",
+      email: "",
+      phone: "",
+      service: "",
+      comments: ""
+    });
+    setErrors({});
   };
 
   if (isSubmitted) {
@@ -233,7 +260,7 @@ export default function ContactPage() {
         <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2 lg:row-span-3">
           <form className="space-y-6" onSubmit={handleSubmit}>
             {/* Name Fields */}
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               <div>
                 <label className="text-primary mb-2 block text-sm font-medium" htmlFor="firstName">
                   First Name <span className="text-elite-teal">*</span>
@@ -259,7 +286,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <label className="text-primary mb-2 block text-sm font-medium" htmlFor="spouseName">
-                  Spouse Name <span className="text-muted text-xs">(optional)</span>
+                  Spouse Name
                 </label>
                 <div className="relative">
                   <Users className="text-muted absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2" />
@@ -272,6 +299,27 @@ export default function ContactPage() {
                     onChange={handleChange}
                   />
                 </div>
+              </div>
+              <div className="sm:col-span-2 lg:col-span-1">
+                <label className="text-primary mb-2 block text-sm font-medium" htmlFor="lastName">
+                  Last Name <span className="text-elite-teal">*</span>
+                </label>
+                <div className="relative">
+                  <UserPen className="text-muted absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2" />
+                  <input
+                    className={`bg-canvas border-edge text-primary placeholder:text-muted/50 w-full rounded-xl border py-3 pr-4 pl-10 text-sm transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none ${
+                      errors.lastName
+                        ? "border-red-500 focus:ring-red-500"
+                        : "focus:border-elite-teal focus:ring-elite-teal/20"
+                    }`}
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                  />
+                </div>
+                {errors.lastName && <p className="mt-1 text-xs text-red-500">{errors.lastName}</p>}
               </div>
             </div>
             {/* Address Fields */}
@@ -373,7 +421,7 @@ export default function ContactPage() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <label className="text-primary mb-2 block text-sm font-medium" htmlFor="email">
-                  Email <span className="text-muted text-xs">(optional)</span>
+                  Email
                 </label>
                 <div className="relative">
                   <Mail className="text-muted absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2" />
@@ -418,34 +466,29 @@ export default function ContactPage() {
             {/* Service Selection */}
             <div>
               <label className="text-primary mb-2 block text-sm font-medium" htmlFor="service">
-                Service Needed <span className="text-elite-teal">*</span>
+                Service Needed
               </label>
               <div className="relative">
                 <Wrench className="text-muted pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2" />
                 <select
-                  className={`bg-canvas border-edge text-primary w-full appearance-none rounded-xl border py-3 pr-4 pl-10 text-sm transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none ${
-                    errors.service
-                      ? "border-red-500 focus:ring-red-500"
-                      : "focus:border-elite-teal focus:ring-elite-teal/20"
-                  } ${!formData.service ? "text-muted/50" : ""}`}
+                  className={`bg-canvas border-edge text-primary focus:border-elite-teal focus:ring-elite-teal/20 w-full appearance-none rounded-xl border py-3 pr-4 pl-10 text-sm transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none ${!formData.service ? "text-muted/50" : ""}`}
                   id="service"
                   name="service"
                   value={formData.service}
                   onChange={handleChange}
                 >
-                  {services.map((s) => (
-                    <option key={s.value} value={s.value}>
-                      {s.label}
+                  {services.map((service) => (
+                    <option key={service.value} value={service.value}>
+                      {service.label}
                     </option>
                   ))}
                 </select>
               </div>
-              {errors.service && <p className="mt-1 text-xs text-red-500">{errors.service}</p>}
             </div>
             {/* Additional Comments */}
             <div>
               <label className="text-primary mb-2 block text-sm font-medium" htmlFor="comments">
-                Additional Comments <span className="text-muted text-xs">(optional)</span>
+                Additional Comments
               </label>
               <div className="relative">
                 <MessageSquare className="text-muted absolute top-3 left-3 h-5 w-5" />
@@ -459,23 +502,34 @@ export default function ContactPage() {
                 />
               </div>
             </div>
-            <button
-              className="bg-elite-teal flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl py-4 text-base font-medium text-white transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
-              disabled={isSubmitting}
-              type="submit"
-            >
-              {isSubmitting ? (
-                <>
-                  <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
-                  Sending...
-                </>
-              ) : (
-                <>
-                  <Send className="h-5 w-5" />
-                  Request Free Estimate
-                </>
-              )}
-            </button>
+            <div className="flex gap-3">
+              <button
+                className="bg-elite-teal flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl py-4 text-base font-medium text-white transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                disabled={isSubmitting}
+                type="submit"
+              >
+                {isSubmitting ? (
+                  <>
+                    <div className="h-5 w-5 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                    Sending...
+                  </>
+                ) : (
+                  <>
+                    <Send className="h-5 w-5" />
+                    Request Free Estimate
+                  </>
+                )}
+              </button>
+              <button
+                className="border-edge text-muted hover:border-elite-teal hover:text-elite-teal flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-5 py-4 text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-50"
+                disabled={isSubmitting}
+                type="button"
+                onClick={handleClear}
+              >
+                <RotateCcw className="h-4 w-4" />
+                Reset Form
+              </button>
+            </div>
           </form>
         </div>
         {/* Contact Info Cards */}
@@ -508,9 +562,9 @@ export default function ContactPage() {
                 <p className="text-primary font-semibold">Email Us</p>
                 <a
                   className="text-elite-teal text-sm hover:underline"
-                  href="mailto:info@elitebasement.com"
+                  href="mailto:info@elitebasementsolutions.com"
                 >
-                  info@elitebasement.com
+                  info@elitebasementsolutions.com
                 </a>
               </div>
             </div>

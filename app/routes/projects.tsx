@@ -203,7 +203,9 @@ export default function Projects() {
       ))}
       <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">
         <div>
-          <p className="text-lg font-medium text-white md:text-xl">Like what you see?</p>
+          <p className="text-center text-lg font-medium text-white md:text-left md:text-xl">
+            Like what you see?
+          </p>
           <p className="text-sm text-white/60">
             Let us revamp your living space into something amazing
           </p>

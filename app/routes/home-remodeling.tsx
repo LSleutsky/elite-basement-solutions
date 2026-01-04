@@ -361,7 +361,7 @@ export default function HomeRemodeling() {
           <p className="text-lg font-medium text-white md:text-xl">
             Ready to revolutionize your home?
           </p>
-          <p className="text-sm text-white/60">{`Share your vision and we'll bring it to life`}</p>
+          <p className="text-center text-sm text-white/60 md:text-left">{`Share your vision and we'll bring it to life`}</p>
         </div>
         <Link
           className="bg-elite-teal rounded-full px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"

@@ -282,7 +282,9 @@ export default function About() {
             <p className="text-lg font-medium text-white md:text-xl">
               Ready for tranquility and peace of mind?
             </p>
-            <p className="text-sm text-white/60">Schedule your free consultation today</p>
+            <p className="text-center text-sm text-white/60 md:text-left">
+              Schedule your free consultation today
+            </p>
           </div>
           <Link
             className="bg-elite-teal rounded-full px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
