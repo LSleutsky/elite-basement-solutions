@@ -197,9 +197,7 @@ export default function Home() {
               <Library className="text-elite-teal h-6 w-6" />
             </div>
             <div>
-              <h3 className="text-primary font-semibold">
-                Visit Our Knowledge Base Learning Center
-              </h3>
+              <h3 className="text-primary font-semibold">Visit Our Learning Center</h3>
               <p className="text-muted text-sm">FAQs, guides, and expert tips for home care</p>
             </div>
           </div>

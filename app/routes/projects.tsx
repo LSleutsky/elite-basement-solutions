@@ -206,7 +206,7 @@ export default function Projects() {
           <p className="text-center text-lg font-medium text-white md:text-left md:text-xl">
             Like what you see?
           </p>
-          <p className="text-sm text-white/60">
+          <p className="text-center text-sm text-white/60 md:text-left">
             Let us revamp your living space into something amazing
           </p>
         </div>

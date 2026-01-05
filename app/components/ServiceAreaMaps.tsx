@@ -166,7 +166,9 @@ export const SoutheasternPennsylvania = ({ className }: MapProps) => {
         <path
           key={county}
           d={path}
-          fill={servedPennsylvaniaCounties.includes(county) ? "url(#pennsylvania-gradient)" : "#9ca39a"}
+          fill={
+            servedPennsylvaniaCounties.includes(county) ? "url(#pennsylvania-gradient)" : "#9ca39a"
+          }
           stroke="#0d0d0d"
           strokeWidth="0.5"
         />

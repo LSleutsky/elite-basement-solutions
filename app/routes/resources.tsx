@@ -876,7 +876,7 @@ export default function Resources() {
           <p className="text-center text-lg font-medium text-white md:text-left md:text-xl">
             Still have questions?
           </p>
-          <p className="text-sm text-white/60">
+          <p className="text-center text-sm text-white/60 md:text-left">
             Our experts are ready to help with your specific situation
           </p>
         </div>

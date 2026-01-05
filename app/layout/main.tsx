@@ -12,12 +12,7 @@ const navLinks = [
   { name: "About", href: "about" }
 ];
 
-const trustItems = [
-  "Licensed & Insured",
-  "Lifetime Warranty",
-  "Free Estimates",
-  "Same-Day Response"
-];
+const trustItems = ["Licensed & Insured", "Lifetime Warranty", "Free Estimates"];
 
 export default function Layout() {
   const headerRef = useRef<HTMLElement>(null);
@@ -106,15 +101,15 @@ export default function Layout() {
       <main className="relative z-10 flex-1 px-4 py-6 md:px-8 md:py-10 md:pb-24">
         <Outlet />
       </main>
-      <footer className="relative z-40 hidden px-4 pb-4 md:block md:px-8">
+      <footer className="relative z-40 mb-20 px-4 pb-4 md:mb-0 md:px-8">
         <div className="mx-auto max-w-6xl rounded-2xl bg-[#0d0d0d] p-4 dark:bg-[#0a0a0a]">
-          <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 px-2">
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-2 text-center md:justify-between md:text-left">
+            <span className="text-elite-teal text-xs font-medium md:text-sm">(215) 555-0123</span>
             {trustItems.map((item, index) => (
               <span key={index} className="text-xs text-[#888] md:text-sm">
                 {item}
               </span>
             ))}
-            <span className="text-elite-teal text-xs font-medium md:text-sm">(215) 555-0123</span>
           </div>
         </div>
       </footer>
@@ -125,7 +120,7 @@ export default function Layout() {
           to="tel:2155550123"
         >
           <span>📞</span>
-          <span>Free Estimate</span>
+          <span>Call Now</span>
         </Link>
       </div>
     </div>

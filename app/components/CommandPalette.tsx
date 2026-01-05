@@ -3,7 +3,6 @@ import {
   BookOpenText,
   CloudRain,
   Command,
-  FileText,
   Home,
   HousePlus,
   Images,
@@ -138,7 +137,7 @@ export default function CommandPalette() {
       {/* Mobile floating button */}
       <button
         aria-label="Open navigation"
-        className="bg-elite-teal fixed right-4 bottom-24 z-40 flex cursor-pointer! rounded-full p-3.5 shadow-xl shadow-black/30 transition-all active:scale-95 md:hidden"
+        className="bg-elite-teal fixed right-4 bottom-24 z-60 flex cursor-pointer! rounded-full p-3.5 shadow-xl shadow-black/30 transition-all active:scale-95 md:hidden"
         onClick={() => setOpen(true)}
       >
         <Search className="text-white" size={22} />

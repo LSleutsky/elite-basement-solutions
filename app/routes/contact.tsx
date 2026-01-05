@@ -5,6 +5,7 @@ import {
   CheckCircle2,
   Clock,
   Hash,
+  ListPlus,
   Mail,
   Map,
   MapPin,
@@ -15,8 +16,7 @@ import {
   Shield,
   User,
   UserPen,
-  Users,
-  Wrench
+  Users
 } from "lucide-react";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Link } from "react-router";
@@ -469,7 +469,7 @@ export default function ContactPage() {
                 Service Needed
               </label>
               <div className="relative">
-                <Wrench className="text-muted pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2" />
+                <ListPlus className="text-muted pointer-events-none absolute top-1/2 left-3 h-5 w-5 -translate-y-1/2" />
                 <select
                   className={`bg-canvas border-edge text-primary focus:border-elite-teal focus:ring-elite-teal/20 w-full appearance-none rounded-xl border py-3 pr-4 pl-10 text-sm transition-colors focus:ring-2 focus:ring-offset-2 focus:outline-none ${!formData.service ? "text-muted/50" : ""}`}
                   id="service"
@@ -502,9 +502,9 @@ export default function ContactPage() {
                 />
               </div>
             </div>
-            <div className="flex gap-3">
+            <div className="flex flex-col gap-3 sm:flex-row">
               <button
-                className="bg-elite-teal flex flex-1 cursor-pointer items-center justify-center gap-2 rounded-xl py-4 text-base font-medium text-white transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50"
+                className="bg-elite-teal flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl py-4 text-base font-medium text-white transition-all hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-50 sm:flex-1"
                 disabled={isSubmitting}
                 type="submit"
               >
@@ -521,7 +521,7 @@ export default function ContactPage() {
                 )}
               </button>
               <button
-                className="border-edge text-muted hover:border-elite-teal hover:text-elite-teal flex cursor-pointer items-center justify-center gap-2 rounded-xl border px-5 py-4 text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-50"
+                className="border-edge text-muted hover:border-elite-teal hover:text-elite-teal flex w-full cursor-pointer items-center justify-center gap-2 rounded-xl border px-5 py-4 text-sm font-medium transition-all disabled:cursor-not-allowed disabled:opacity-50 sm:w-auto"
                 disabled={isSubmitting}
                 type="button"
                 onClick={handleClear}
