@@ -84,7 +84,7 @@ export default function MoldRemediationPage() {
           <img
             alt="Mold growth on basement walls"
             className="h-full w-full object-cover"
-            src="/public/mold-growth.jpg"
+            src="/mold-growth.jpg"
           />
         </div>
         <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2">
@@ -225,7 +225,7 @@ export default function MoldRemediationPage() {
           <img
             alt="Water damage leading to mold"
             className="h-full w-full object-cover"
-            src="/public/mold-water-damage.jpg"
+            src="/mold-water-damage.jpg"
           />
         </div>
         <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2">
@@ -276,7 +276,7 @@ export default function MoldRemediationPage() {
             <img
               alt="Mold testing equipment"
               className="h-full w-full object-cover"
-              src="/public/mold-testing.jpg"
+              src="/mold-testing.jpg"
             />
           </div>
           <div className="bg-surface flex items-center justify-center rounded-2xl p-6">

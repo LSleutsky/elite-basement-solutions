@@ -243,7 +243,7 @@ export default function HomeRemodeling() {
             <img
               alt="Finished basement"
               className="h-full w-full object-cover"
-              src="/public/finished-basement.jpg"
+              src="/finished-basement.jpg"
             />
           </div>
         </div>
@@ -279,7 +279,7 @@ export default function HomeRemodeling() {
             <img
               alt="Modern kitchen"
               className="h-full w-full object-cover"
-              src="/public/kitchen-remodel.jpg"
+              src="/kitchen-remodel.jpg"
             />
           </div>
         </div>
@@ -315,7 +315,7 @@ export default function HomeRemodeling() {
             <img
               alt="Modern bathroom"
               className="h-full w-full object-cover"
-              src="/public/bathroom-remodel.jpg"
+              src="/bathroom-remodel.jpg"
             />
           </div>
         </div>

@@ -55,3 +55,6 @@ export const validatePhone = (phone: string): boolean => {
 
   return digits.length === 10;
 };
+
+export const getImageUrl = (id: string, size: string = "800x600"): string =>
+  `https://ucarecdn.com/${id}/-/preview/${size}/-/format/auto/-/quality/smart/`;

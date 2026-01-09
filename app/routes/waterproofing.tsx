@@ -81,7 +81,7 @@ export default function WaterproofingPage() {
           <img
             alt="Water entry points in basement"
             className="h-full w-full object-cover"
-            src="/public/water-seepage.jpg"
+            src="/water-seepage.jpg"
           />
         </div>
         <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2">
@@ -173,8 +173,8 @@ export default function WaterproofingPage() {
           <p className="text-muted mb-6 text-base leading-relaxed">
             Our trained technicians first diagnose and evaluate your specific situation. Only then
             do we design a custom pressure relief system tailored to keep your home dry and healthy.
-            We install perimeter drains, sump pump systems, vapor barriers, and wall encapsulation,
-            all engineered for your unique conditions.
+            We install perimeter drains, sump pump systems with battery backups, vapor barriers, and
+            wall encapsulation, all engineered for your unique conditions.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
             {[
@@ -237,7 +237,7 @@ export default function WaterproofingPage() {
           <img
             alt="Outside drainage system"
             className="h-full w-full object-cover"
-            src="/public/gravity-drain.jpg"
+            src="/gravity-drain.jpg"
           />
         </div>
         <div className="bg-surface order-1 rounded-2xl p-6 md:p-8 lg:order-0 lg:col-span-2">
@@ -285,7 +285,7 @@ export default function WaterproofingPage() {
             <img
               alt="Foundation crack repair"
               className="h-full w-full object-cover"
-              src="/public/crack-repair.jpg"
+              src="/crack-repair.jpg"
             />
           </div>
           <div className="bg-surface flex items-center justify-center rounded-2xl p-6">

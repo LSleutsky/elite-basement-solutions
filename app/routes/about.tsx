@@ -93,7 +93,7 @@ export default function About() {
           <img
             alt="Elite Basement Solutions team at work"
             className="h-full w-full object-cover"
-            src="/public/elite-basement-worker.png"
+            src="/elite-basement-worker.png"
           />
         </div>
       </div>
@@ -211,7 +211,7 @@ export default function About() {
           <img
             alt="Quality craftsmanship example"
             className="h-full w-full object-cover"
-            src="/public/elite-basement-quality.jpg"
+            src="/elite-basement-quality.jpg"
           />
         </div>
         <div className="bg-surface rounded-2xl p-6">
