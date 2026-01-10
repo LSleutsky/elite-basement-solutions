@@ -21,15 +21,15 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
+import { createMeta } from "@/utils";
+
 export function meta() {
-  return [
-    { title: "Home Remodeling | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Professional home remodeling services including basement finishing, kitchen renovations, and bathroom upgrades in Southeastern Pennsylvania, New Jersey, and Northern Delaware."
-    }
-  ];
+  return createMeta({
+    title: "Home Remodeling | Elite Basement Solutions",
+    description:
+      "Professional home remodeling services including basement finishing, kitchen renovations, and bathroom upgrades in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
+    path: "home-remodeling"
+  });
 }
 
 const basementFeatures = [

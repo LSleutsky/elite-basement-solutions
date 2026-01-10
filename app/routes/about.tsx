@@ -19,15 +19,15 @@ import {
   SoutheasternPennsylvania
 } from "@/components/ServiceAreaMaps";
 
+import { createMeta } from "@/utils";
+
 export function meta() {
-  return [
-    { title: "About Us | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Learn about Elite Basement Solutions - your trusted experts in basement waterproofing, mold remediation, and home remodeling in Southeastern Pennsylvania, New Jersey, and Northern Delaware."
-    }
-  ];
+  return createMeta({
+    title: "About Us | Elite Basement Solutions",
+    description:
+      "Learn about Elite Basement Solutions - your trusted experts in basement waterproofing, mold remediation, and home remodeling in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
+    path: "about"
+  });
 }
 
 const serviceAreas: { area: string; map: JSX.Element; hash: string }[] = [

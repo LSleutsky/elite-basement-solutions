@@ -3,13 +3,14 @@ import { Link } from "react-router";
 
 import Logo from "@/components/Logo";
 
-import { getYearsOfExperience } from "@/utils";
+import { createMeta, getYearsOfExperience } from "@/utils";
 
 export function meta() {
-  return [
-    { title: "Elite Basement Solutions" },
-    { name: "description", content: "Welcome to Elite Basement Solutions!" }
-  ];
+  return createMeta({
+    title: "Elite Basement Solutions | Basement Waterproofing, Mold Remediation & Remodeling",
+    description:
+      "Professional basement waterproofing, mold remediation, and home remodeling services in PA, NJ & DE. Licensed, insured, and backed by a lifetime warranty."
+  });
 }
 
 const services = [

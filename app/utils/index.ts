@@ -1,5 +1,15 @@
+interface MetaOptions {
+  title: string;
+  description: string;
+  path?: string;
+  image?: string;
+}
+
+const BASE_URL = "https://elitebasementsolutions.com";
+const DEFAULT_OG_IMAGE = `/elite-logo.png`;
 // May 1st, 1987
 const FOUNDED_DATE = new Date(1987, 4, 1);
+const SITE_NAME = "Elite Basement Solutions";
 
 export const getYearsOfExperience = (): number => {
   const now = new Date();
@@ -58,3 +68,29 @@ export const validatePhone = (phone: string): boolean => {
 
 export const getImageUrl = (id: string, size: string = "800x600"): string =>
   `https://ucarecdn.com/${id}/-/preview/${size}/-/format/auto/-/quality/smart/`;
+
+export const createMeta = ({
+  title,
+  description,
+  path = "",
+  image = DEFAULT_OG_IMAGE
+}: MetaOptions) => {
+  const url = `${BASE_URL}/${path}`;
+
+  return [
+    { title },
+    { name: "description", content: description },
+    { property: "og:type", content: "website" },
+    { property: "og:url", content: url },
+    { property: "og:title", content: title },
+    { property: "og:description", content: description },
+    { property: "og:image", content: image },
+    { property: "og:image:width", content: "1200" },
+    { property: "og:image:height", content: "630" },
+    { property: "og:site_name", content: SITE_NAME },
+    { name: "twitter:card", content: "summary_large_image" },
+    { name: "twitter:title", content: title },
+    { name: "twitter:description", content: description },
+    { name: "twitter:image", content: image }
+  ];
+};

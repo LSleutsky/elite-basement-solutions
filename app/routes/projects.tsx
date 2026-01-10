@@ -11,20 +11,18 @@ import { useState } from "react";
 import { RowsPhotoAlbum } from "react-photo-album";
 import Lightbox from "yet-another-react-lightbox";
 
-import { getImageUrl } from "@/utils";
+import { createMeta, getImageUrl } from "@/utils";
 
 import "react-photo-album/rows.css";
 import "yet-another-react-lightbox/styles.css";
 
 export function meta() {
-  return [
-    { title: "Project Gallery | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Browse our project gallery showcasing basement waterproofing, mold remediation, foundation repair, and home remodeling work throughout the Tri-State area."
-    }
-  ];
+  return createMeta({
+    title: "Project Gallery | Elite Basement Solutions",
+    description:
+      "Browse our project gallery showcasing basement waterproofing, mold remediation, foundation repair, and home remodeling work throughout the Tri-State area.",
+    path: "projects"
+  });
 }
 
 interface Photo {

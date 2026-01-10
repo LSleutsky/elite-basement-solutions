@@ -24,6 +24,7 @@ import { Link } from "react-router";
 import {
   capitalizeFirst,
   capitalizeWords,
+  createMeta,
   formatPhoneNumber,
   getYearsOfExperience,
   validateEmail,
@@ -31,14 +32,12 @@ import {
 } from "@/utils";
 
 export function meta() {
-  return [
-    { title: "Contact Us | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Get a free estimate for basement waterproofing, mold remediation, or home remodeling in PA, NJ & DE. Contact Elite Basement Solutions today."
-    }
-  ];
+  return createMeta({
+    title: "Contact Us | Elite Basement Solutions",
+    description:
+      "Get a free estimate for basement waterproofing, mold remediation, or home remodeling in PA, NJ & DE. Contact Elite Basement Solutions today.",
+    path: "contact"
+  });
 }
 
 type FormData = {

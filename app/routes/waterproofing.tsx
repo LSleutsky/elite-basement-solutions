@@ -15,15 +15,15 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
+import { createMeta } from "@/utils";
+
 export function meta() {
-  return [
-    { title: "Waterproofing Services | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Professional basement waterproofing in PA, NJ & DE. Interior drainage, sump pumps, foundation repair, and moisture control with lifetime warranty."
-    }
-  ];
+  return createMeta({
+    title: "Waterproofing Services | Elite Basement Solutions",
+    description:
+      "Professional basement waterproofing in PA, NJ & DE. Interior drainage, sump pumps, foundation repair, and moisture control with lifetime warranty.",
+    path: "waterproofing"
+  });
 }
 
 const seepageSources = [

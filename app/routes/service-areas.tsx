@@ -10,15 +10,15 @@ import {
   Town
 } from "@/data/serviceAreas";
 
+import { createMeta } from "@/utils";
+
 export function meta() {
-  return [
-    { title: "Service Areas | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Elite Basement Solutions serves Southeastern Pennsylvania, New Jersey, and Northern Delaware. Find your town and zip code in our service area."
-    }
-  ];
+  return createMeta({
+    title: "Service Areas | Elite Basement Solutions",
+    description:
+      "Elite Basement Solutions serves Southeastern Pennsylvania, New Jersey, and Northern Delaware. Find your town and zip code in our service area.",
+    path: "service-areas"
+  });
 }
 
 interface SearchResult {

@@ -15,15 +15,15 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
+import { createMeta } from "@/utils";
+
 export function meta() {
-  return [
-    { title: "Our Services | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Professional basement waterproofing, mold remediation, and home remodeling services in Southeastern Pennsylvania, New Jersey, and Northern Delaware."
-    }
-  ];
+  return createMeta({
+    title: "Our Services | Elite Basement Solutions",
+    description:
+      "Professional basement waterproofing, mold remediation, and home remodeling services in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
+    path: "services"
+  });
 }
 
 const moldFeatures = [

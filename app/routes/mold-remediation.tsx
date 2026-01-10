@@ -15,15 +15,15 @@ import {
 } from "lucide-react";
 import { Link } from "react-router";
 
+import { createMeta } from "@/utils";
+
 export function meta() {
-  return [
-    { title: "Mold Remediation Services | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Professional mold remediation in PA, NJ & DE. Certified mold removal, air quality restoration, and moisture control. Protect your family's health."
-    }
-  ];
+  return createMeta({
+    title: "Mold Remediation Services | Elite Basement Solutions",
+    description:
+      "Professional mold remediation in PA, NJ & DE. Certified mold removal, air quality restoration, and moisture control. Protect your family's health.",
+    path: "mold-remediation"
+  });
 }
 
 const healthEffects = [

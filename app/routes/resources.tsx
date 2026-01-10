@@ -13,15 +13,15 @@ import {
 } from "lucide-react";
 import { useState } from "react";
 
+import { createMeta } from "@/utils";
+
 export function meta() {
-  return [
-    { title: "Knowledge Base & Resources | Elite Basement Solutions" },
-    {
-      name: "description",
-      content:
-        "Learn about basement waterproofing, mold remediation, foundation repair, home remodeling, and plumbing. Expert knowledge and FAQs from Elite Basement Solutions."
-    }
-  ];
+  return createMeta({
+    title: "Knowledge Base & Resources | Elite Basement Solutions",
+    description:
+      "Learn about basement waterproofing, mold remediation, foundation repair, home remodeling, and plumbing. Expert knowledge and FAQs from Elite Basement Solutions.",
+    path: "resources"
+  });
 }
 
 type Category = "all" | "waterproofing" | "foundation" | "mold" | "remodeling" | "plumbing";
