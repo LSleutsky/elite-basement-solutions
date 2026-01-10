@@ -64,110 +64,227 @@ const createPhoto = (image: ImageData): Photo => {
 const waterproofingImages: ImageData[] = [
   {
     id: "5c1ff590-d5c5-4ec7-b603-8e3b6f7ebb99",
-    width: 800,
-    height: 600,
+    width: 1200,
+    height: 800,
     alt: "Interior drainage installation"
   },
   {
     id: "0e910767-ad5d-424b-a862-294bc0421889",
     width: 600,
-    height: 800,
+    height: 900,
     alt: "Mira drain installation"
   },
-  { id: "33233dc1-53fe-4c20-913f-e5dac2505882", width: 800, height: 800, alt: "PVC drainage pipe" },
+  { id: "e54673ef-aa50-4fd6-a1de-5b7ed13ea0d0", width: 700, height: 700, alt: "PVC drainage pipe" },
   {
     id: "f21224db-aa2d-4025-90d9-3190c4bd8b1d",
-    width: 1000,
-    height: 600,
+    width: 1400,
+    height: 700,
     alt: "Sump pump installation"
   },
   {
-    id: "abf17c33-53ad-468f-9ae4-2e57aa468bc2",
+    id: "ffde64bc-ad84-4fe0-a82c-b1a3358e0308",
     width: 600,
-    height: 900,
+    height: 1000,
     alt: "Cemented floor drain"
   },
   {
-    id: "7f9d0bb2-0308-484f-aa15-a441e1f0deb8",
+    id: "9231e052-8c0c-4be2-9a87-b4b248308df9",
+    width: 1000,
+    height: 700,
+    alt: "Basement drainage"
+  },
+  {
+    id: "59be4c39-2a41-421a-9762-51663285ac8e",
+    width: 800,
+    height: 800,
+    alt: "PVC drainage system"
+  },
+  {
+    id: "40b9e3d4-e0d6-4c7a-814e-dd2c9cebcef5",
+    width: 1200,
+    height: 600,
+    alt: "Sump pump basin"
+  },
+  {
+    id: "eb2696e9-0c14-4874-8929-4ab8212f0dc6",
     width: 900,
     height: 600,
-    alt: "Exterior waterproofing"
+    alt: "Finished french drain system"
   },
   {
-    id: "5c02d93d-e3c7-4d94-beb6-eb420bdaa2a6",
+    id: "d7835a15-eaa8-42df-b1f2-ddead5939bfb",
     width: 700,
-    height: 700,
-    alt: "Exterior wall encapsulation"
+    height: 1000,
+    alt: "Finished french drain system"
   },
   {
-    id: "67d63c06-2535-43cc-8fc4-2c242bf5469e",
-    width: 800,
-    height: 500,
-    alt: "Outside drainage system"
+    id: "adba0f94-2a1c-4023-9c20-6e490ba25322",
+    width: 1100,
+    height: 700,
+    alt: "Finished french drain system"
+  },
+  {
+    id: "52145230-21fc-4540-8cae-53095867c8c2",
+    width: 750,
+    height: 750,
+    alt: "Finished french drain system"
   }
 ];
 
 const moldImages: ImageData[] = [
   {
     id: "87da2e6d-ad26-4a10-881b-05de7c6b3584",
-    width: 800,
-    height: 600,
+    width: 1100,
+    height: 750,
     alt: "Black mold on wall"
   },
   {
     id: "2638532e-9d9f-463e-bea1-fe815a98f4f6",
-    width: 600,
-    height: 800,
+    width: 650,
+    height: 950,
     alt: "Black mold between wall studs"
   },
   {
     id: "d99fccc2-2eec-4ccb-94fa-5f5aefbfedd0",
-    width: 800,
-    height: 800,
+    width: 750,
+    height: 750,
     alt: "Drywall mold infestation"
   },
-  { id: "dc2a7da4-4de5-4173-9c15-80f18b601834", width: 1000, height: 600, alt: "Mold in rafters" },
+  { id: "dc2a7da4-4de5-4173-9c15-80f18b601834", width: 1300, height: 700, alt: "Mold in rafters" },
   {
     id: "0e13f5f9-46ae-472c-8964-318b44b9e91f",
     width: 600,
-    height: 900,
+    height: 1000,
     alt: "Mold on walls leading down stairs"
   },
   {
     id: "ff9c8399-d01f-4ff4-a0bd-659727660f32",
-    width: 900,
-    height: 600,
+    width: 1000,
+    height: 650,
     alt: "Black mold behind drywall"
   },
   {
     id: "8b17e26f-d200-48ab-b275-82301931f06f",
-    width: 700,
-    height: 700,
+    width: 800,
+    height: 800,
     alt: "Disinfecting heavy mold colonies"
   },
-  { id: "ddb58a0f-82cd-47c2-aa12-019af19672fe", width: 800, height: 500, alt: "Severe black mold" }
+  { id: "ddb58a0f-82cd-47c2-aa12-019af19672fe", width: 1200, height: 650, alt: "Severe black mold" }
 ];
 
 const foundationImages: ImageData[] = [
-  { id: "", width: 800, height: 600, alt: "Foundation crack repair" },
-  { id: "", width: 600, height: 800, alt: "Wall stabilization" },
-  { id: "", width: 800, height: 800, alt: "Carbon fiber reinforcement" },
-  { id: "", width: 1000, height: 600, alt: "Structural restoration" },
-  { id: "", width: 600, height: 900, alt: "Basement wall repair" },
-  { id: "", width: 900, height: 600, alt: "Foundation waterproofing" },
-  { id: "", width: 700, height: 700, alt: "Crack injection" },
-  { id: "", width: 800, height: 500, alt: "Wall anchor installation" }
+  {
+    id: "365832c8-f5a5-40ef-9818-cb79974a2b67",
+    width: 750,
+    height: 750,
+    alt: "Foundation crack repair"
+  },
+  {
+    id: "0e3456fd-6263-4046-a4c0-3c7d6326f004",
+    width: 650,
+    height: 1000,
+    alt: "Wall stabilization"
+  },
+  {
+    id: "a7ec9026-c4fa-45fe-98e4-c1cc462ae61d",
+    width: 1100,
+    height: 700,
+    alt: "Carbon fiber reinforcement"
+  },
+  {
+    id: "d5047536-61f3-4385-97c6-fc9f850bf14a",
+    width: 1300,
+    height: 650,
+    alt: "Basement structural restoration"
+  },
+  {
+    id: "ee0780a3-fbc8-4a27-87ab-fa974ea4c9c6",
+    width: 700,
+    height: 950,
+    alt: "Basement wall repair"
+  },
+  {
+    id: "d1fdde08-eea9-40f4-a0f7-a5dcd3a4ca67",
+    width: 1000,
+    height: 700,
+    alt: "Foundation crack fix"
+  },
+  { id: "5830b996-2dfc-473e-82c7-deca4dd78173", width: 800, height: 800, alt: "Crack injection" },
+  {
+    id: "8806dda3-4372-4641-bc9c-f456e79e0fcc",
+    width: 1200,
+    height: 600,
+    alt: "Wall anchor installation"
+  },
+  { id: "facc60ff-68b9-4a13-8a16-0cc5dcaf319a", width: 600, height: 900, alt: "Wall staples" },
+  { id: "f1eea8ec-2e69-42c7-b9f3-3a84f207644e", width: 650, height: 1000, alt: "Wall pins" }
 ];
 
 const remodelingImages: ImageData[] = [
-  { id: "", width: 800, height: 600, alt: "Basement finishing" },
-  { id: "", width: 600, height: 800, alt: "Custom renovation" },
-  { id: "", width: 800, height: 800, alt: "Flooring installation" },
-  { id: "", width: 1000, height: 600, alt: "Living space transformation" },
-  { id: "", width: 600, height: 900, alt: "Ceiling work" },
-  { id: "", width: 900, height: 600, alt: "Bathroom addition" },
-  { id: "", width: 700, height: 700, alt: "Home theater build" },
-  { id: "", width: 800, height: 500, alt: "Complete basement remodel" }
+  {
+    id: "e91b6fc1-15f9-43c8-9c00-6c384151ed8e",
+    width: 1200,
+    height: 750,
+    alt: "Basement finishing"
+  },
+  { id: "77a0dae5-21ff-4e6c-a080-2569a8bf526e", width: 650, height: 950, alt: "Custom renovation" },
+  {
+    id: "91569d59-a901-4f0d-a982-6b4ade5cf08b",
+    width: 800,
+    height: 800,
+    alt: "Flooring installation"
+  },
+  {
+    id: "62131629-912f-464e-8fb5-7136b125ca1e",
+    width: 1400,
+    height: 700,
+    alt: "Living space transformation"
+  },
+  { id: "45491a07-2e11-4445-813b-78efabdce834", width: 600, height: 1000, alt: "Ceiling work" },
+  {
+    id: "1d17c163-f6fe-4f1b-a85f-63e996485636",
+    width: 1100,
+    height: 700,
+    alt: "Bathroom addition"
+  },
+  {
+    id: "fadd2dfb-09b2-42ed-8a99-c98600490d0f",
+    width: 750,
+    height: 750,
+    alt: "Home theater build"
+  },
+  {
+    id: "555d3dbc-2284-49ea-96bd-e7eeed277774",
+    width: 1300,
+    height: 650,
+    alt: "Complete basement remodel"
+  },
+  {
+    id: "abd67c27-b2fc-47c7-9ce7-d4035f0633b1",
+    width: 1000,
+    height: 700,
+    alt: "Basement laundry room"
+  },
+  {
+    id: "3547e399-9ef6-49e3-85c9-b47d6db7efcd",
+    width: 700,
+    height: 950,
+    alt: "Basement full bathroom"
+  },
+  { id: "d4f67bc1-d03d-4ba3-85b2-81a000d5eefb", width: 850, height: 850, alt: "Basement man cave" },
+  { id: "4c5b0024-4027-40a8-97e5-14f2d849486f", width: 1200, height: 650, alt: "Basement storage" },
+  {
+    id: "7a299ec7-638b-4872-b61f-0b5e86a36c84",
+    width: 950,
+    height: 700,
+    alt: "Custom basement remodel"
+  },
+  {
+    id: "694f26ad-aae6-470b-a2af-87f1286de230",
+    width: 1100,
+    height: 750,
+    alt: "Custom basement living space"
+  }
 ];
 
 const projectCategories: ProjectCategory[] = [
