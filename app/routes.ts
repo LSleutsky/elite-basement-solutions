@@ -11,7 +11,6 @@ export default [
     route("resources", "./routes/resources.tsx"),
     route("service-areas", "./routes/service-areas.tsx"),
     route("services", "./routes/services.tsx"),
-    route("waterproofing", "./routes/waterproofing.tsx"),
-    route("contact", "./routes/contact.tsx")
+    route("waterproofing", "./routes/waterproofing.tsx")
   ])
 ] satisfies RouteConfig;
