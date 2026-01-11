@@ -36,17 +36,17 @@ export default function Home() {
             HOME IMPROVEMENT EXPERTS
           </p>
           <div className="space-y-3 md:space-y-4">
-            <h1 className="font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
+            <h1 className="font-serif text-xl leading-tight sm:text-2xl md:text-4xl lg:text-5xl">
               <span className="text-primary">We make </span>
               <span className="text-primary">basements </span>
               <span className="text-elite-teal">beautiful.</span>
             </h1>
-            <h1 className="font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
+            <h1 className="font-serif text-xl leading-tight sm:text-2xl md:text-4xl lg:text-5xl">
               <span className="text-primary">We make </span>
               <span className="text-primary">homes </span>
               <span className="text-elite-teal">healthy.</span>
             </h1>
-            <h1 className="font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
+            <h1 className="font-serif text-xl leading-tight sm:text-2xl md:text-4xl lg:text-5xl">
               <span className="text-primary">We make </span>
               <span className="text-primary">spaces </span>
               <span className="text-elite-teal">elite.</span>
