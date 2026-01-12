@@ -238,6 +238,10 @@ export default function About() {
               <Check className="text-elite-teal" size={22} />
               <span>Military, police, teacher, and first responder discounts</span>
             </li>
+            <li className="flex items-start gap-2">
+              <Check className="text-elite-teal" size={22} />
+              <span>Fully licensed and insured</span>
+            </li>
           </ul>
         </div>
         <div className="bg-surface rounded-2xl p-6">

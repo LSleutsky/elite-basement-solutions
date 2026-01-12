@@ -243,12 +243,13 @@ export default function ContactPage() {
         <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2">
           <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">CONTACT US</p>
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
-            {`Let's protect your home together.`}
+            {`Let's protect your investment together.`}
           </h1>
           <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted text-base md:text-lg">
-            Ready to solve your basement problems for good? Fill out the form below and one of our
-            experts will reach out within 24 hours to schedule your free, no-obligation inspection.
+            Ready to solve your water and mold problems for good? Fill out the form below and one of
+            our experts will reach out within 24 hours to schedule your free, no-obligation
+            inspection.
           </p>
         </div>
         <div className="bg-elite-teal flex flex-col items-center justify-center rounded-2xl p-6 text-center">

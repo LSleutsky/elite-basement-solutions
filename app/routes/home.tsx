@@ -14,8 +14,8 @@ export function meta() {
 }
 
 const services = [
-  { name: "Residential", description: "Stop leaks forever", href: "/waterproofing" },
-  { name: "Commercial", description: "Certified & safe", href: "/mold-remediation" }
+  { name: "Residential", description: "Protect your home", href: "/residential" },
+  { name: "Commercial", description: "Protect your business", href: "/commercial" }
 ];
 
 const yearsOfExcellence = getYearsOfExperience();

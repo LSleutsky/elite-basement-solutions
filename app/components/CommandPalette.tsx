@@ -1,6 +1,7 @@
 import {
   Biohazard,
   BookOpenText,
+  Building2,
   CloudRain,
   Command,
   Home,
@@ -18,6 +19,18 @@ import { useNavigate } from "react-router";
 const pages = [
   { name: "Home", href: "/", icon: Home, keywords: ["start", "main", "landing"] },
   { name: "About", href: "/about", icon: BookOpenText, keywords: ["about", "who we are"] },
+  {
+    name: "Residential",
+    href: "/residential",
+    icon: Home,
+    keywords: ["home", "homeowner", "house", "residential services"]
+  },
+  {
+    name: "Commercial",
+    href: "/commercial",
+    icon: Building2,
+    keywords: ["business", "commercial", "property", "building", "office", "warehouse"]
+  },
   {
     name: "Waterproofing",
     href: "/waterproofing",
