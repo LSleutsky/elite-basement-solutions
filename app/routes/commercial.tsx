@@ -89,6 +89,15 @@ const industriesServed = [
   }
 ];
 
+const management = [
+  "Priority emergency response",
+  "Volume pricing available",
+  "Preventive maintenance plans",
+  "Multi-property coordination",
+  "Detailed inspection reports",
+  "Financing options available"
+];
+
 const whyCommercialClients = [
   {
     icon: Clock,
@@ -217,7 +226,7 @@ export default function CommercialPage() {
           </div>
         ))}
       </section>
-      {/* Property Manager & Building Owners */}
+      {/* Property Managers & Building Owners */}
       <section className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2">
           <h2 className="text-primary mb-4 font-serif text-2xl md:text-3xl">
@@ -234,14 +243,7 @@ export default function CommercialPage() {
             problems before they become emergencies.
           </p>
           <div className="grid gap-3 sm:grid-cols-2">
-            {[
-              "Priority emergency response",
-              "Volume pricing available",
-              "Preventive maintenance plans",
-              "Multi-property coordination",
-              "Detailed inspection reports",
-              "Direct insurance billing"
-            ].map((item) => (
+            {management.map((item) => (
               <div key={item} className="text-muted flex items-center gap-2 text-sm">
                 <Check className="text-elite-olive h-4 w-4 shrink-0" />
                 <span>{item}</span>
@@ -302,7 +304,7 @@ export default function CommercialPage() {
           <div className="bg-elite-olive/20 mx-auto mb-3 inline-flex rounded-full p-3">
             <ShieldCheck className="text-elite-olive h-5 w-5" />
           </div>
-          <p className="text-primary text-sm font-semibold">Fully Insured</p>zz
+          <p className="text-primary text-sm font-semibold">Fully Insured</p>
           <p className="text-muted text-xs">Liability coverage</p>
         </div>
         <div className="bg-surface rounded-2xl p-6 text-center">
@@ -333,7 +335,7 @@ export default function CommercialPage() {
           className="bg-elite-teal inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
           to="/contact"
         >
-          Request Commercial Quote <ArrowRight size={16} />
+          Request Quote <ArrowRight size={16} />
         </Link>
       </div>
     </article>
