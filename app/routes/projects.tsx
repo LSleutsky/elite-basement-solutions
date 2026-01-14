@@ -20,7 +20,7 @@ export function meta() {
   return createMeta({
     title: "Project Gallery | Elite Basement Solutions",
     description:
-      "Browse our project gallery showcasing basement waterproofing, mold remediation, foundation repair, and home remodeling work throughout the Tri-State area.",
+      "Browse our project gallery showcasing basement waterproofing, mold remediation, foundation repair, and basement remodeling work throughout the Tri-State area.",
     path: "projects"
   });
 }
@@ -315,7 +315,7 @@ const projectCategories: ProjectCategory[] = [
   },
   {
     id: "remodeling",
-    name: "Home Remodeling",
+    name: "Basement Renovations",
     description:
       "Basement finishing, custom renovations, flooring, ceilings, and complete living space transformations.",
     icon: HousePlus,
@@ -404,7 +404,7 @@ export default function Projects() {
           <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
             Browse through our completed projects across waterproofing, mold remediation, foundation
-            repair, and home remodeling. Each project showcases our commitment to quality
+            repair, and basement renovations. Each project showcases our commitment to quality
             craftsmanship and customer satisfaction.
           </p>
         </div>

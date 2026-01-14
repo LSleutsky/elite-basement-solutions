@@ -6,7 +6,7 @@ export default [
     route("about", "./routes/about.tsx"),
     route("commercial", "./routes/commercial.tsx"),
     route("contact", "./routes/contact.tsx"),
-    route("home-remodeling", "./routes/home-remodeling.tsx"),
+    route("basement-renovations", "./routes/basement-renovations.tsx"),
     route("mold-remediation", "./routes/mold-remediation.tsx"),
     route("projects", "./routes/projects.tsx"),
     route("residential", "./routes/residential.tsx"),

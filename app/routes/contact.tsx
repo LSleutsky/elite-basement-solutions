@@ -35,7 +35,7 @@ export function meta() {
   return createMeta({
     title: "Contact Us | Elite Basement Solutions",
     description:
-      "Get a free estimate for basement waterproofing, mold remediation, or home remodeling in PA, NJ & DE. Contact Elite Basement Solutions today.",
+      "Get a free estimate for basement waterproofing, mold remediation, or basement remodeling in PA, NJ & DE. Contact Elite Basement Solutions today.",
     path: "contact"
   });
 }
@@ -60,7 +60,7 @@ const services = [
   { value: "", label: "Select a service..." },
   { value: "waterproofing", label: "Waterproofing" },
   { value: "mold-remediation", label: "Mold Remediation" },
-  { value: "home-remodeling", label: "Home Remodeling" },
+  { value: "basement-renovations", label: "Basement Renovations" },
   { value: "other", label: "Other" }
 ];
 
@@ -84,6 +84,13 @@ export default function ContactPage() {
     service: "",
     comments: ""
   });
+
+  const stats = [
+    { stat: "2,500+", label: "Projects Completed" },
+    { stat: `${yearsOfExperience}+`, label: "Years Experience" },
+    { stat: "3", label: "States Served", href: "/service-areas" },
+    { stat: "100%", label: "Satisfaction Guarantee" }
+  ];
 
   const handleChange = (
     event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -541,8 +548,8 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="text-primary font-semibold">Call Us</p>
-                <a className="text-elite-teal text-sm hover:underline" href="tel:2155550123">
-                  (215) 555-0123
+                <a className="text-elite-teal text-sm hover:underline" href="tel:18009025311">
+                  (800) 902-5311
                 </a>
               </div>
             </div>
@@ -605,20 +612,29 @@ export default function ContactPage() {
         </div>
       </div>
       <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {[
-          { stat: "2,500+", label: "Projects Completed" },
-          { stat: `${yearsOfExperience}+`, label: "Years Experience" },
-          { stat: "4.9", label: "Google Rating" },
-          { stat: "100%", label: "Satisfaction Guarantee" }
-        ].map((item) => (
-          <div
-            key={item.label}
-            className="bg-surface flex flex-col items-center justify-center rounded-2xl p-6 text-center"
-          >
-            <span className="text-elite-teal text-2xl font-semibold md:text-3xl">{item.stat}</span>
-            <p className="text-muted mt-1 text-xs">{item.label}</p>
-          </div>
-        ))}
+        {stats.map((item) => {
+          const content = (
+            <>
+              <span className="text-elite-teal text-2xl font-semibold md:text-3xl">
+                {item.stat}
+              </span>
+              <p className="text-muted mt-1 text-xs">{item.label}</p>
+            </>
+          );
+
+          const className =
+            "bg-surface flex flex-col items-center justify-center rounded-2xl p-6 text-center";
+
+          return item.href ? (
+            <Link key={item.label} className={className} to={item.href}>
+              {content}
+            </Link>
+          ) : (
+            <div key={item.label} className={className}>
+              {content}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

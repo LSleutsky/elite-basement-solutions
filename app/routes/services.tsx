@@ -21,7 +21,7 @@ export function meta() {
   return createMeta({
     title: "Our Services | Elite Basement Solutions",
     description:
-      "Professional basement waterproofing, mold remediation, and home remodeling services in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
+      "Professional basement waterproofing, mold remediation, and basement remodeling services in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
     path: "services"
   });
 }
@@ -168,7 +168,9 @@ export default function Services() {
           <div className="bg-elite-teal/20 mb-4 inline-flex rounded-full p-4">
             <HousePlus className="text-elite-teal h-8 w-8" />
           </div>
-          <h2 className="text-primary mb-3 font-serif text-2xl md:text-3xl">Home Remodeling</h2>
+          <h2 className="text-primary mb-3 font-serif text-2xl md:text-3xl">
+            Basement Renovations
+          </h2>
           <p className="text-muted mb-6 max-w-xl text-base leading-relaxed md:text-lg">
             {`Your basement has untapped potential. Whether you envision a home theater, gym, office,
               or extra living space, we bring your vision to life with expert know-how and
@@ -184,7 +186,7 @@ export default function Services() {
           </ul>
           <Link
             className="bg-elite-teal inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"
-            to="/home-remodeling"
+            to="/basement-renovations"
           >
             Learn more <ArrowRight size={16} />
           </Link>

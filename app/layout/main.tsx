@@ -104,7 +104,7 @@ export default function Layout() {
       <footer className="relative z-40 mb-20 px-4 pb-4 md:mb-0 md:px-8">
         <div className="mx-auto max-w-6xl rounded-2xl bg-[#0d0d0d] p-4 dark:bg-[#0a0a0a]">
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 px-2 text-center md:justify-between md:text-left">
-            <span className="text-elite-teal text-xs font-medium md:text-sm">(215) 555-0123</span>
+            <span className="text-elite-teal text-xs font-medium md:text-sm">(800) 902-5311</span>
             {trustItems.map((item, index) => (
               <span key={index} className="text-xs text-[#888] md:text-sm">
                 {item}
@@ -117,7 +117,7 @@ export default function Layout() {
       <div className="bg-canvas/95 fixed right-0 bottom-0 left-0 z-50 border-t border-white/10 p-4 backdrop-blur-lg md:hidden">
         <Link
           className="bg-elite-olive flex w-full items-center justify-center gap-2 rounded-full py-3 text-sm font-medium text-white"
-          to="tel:2155550123"
+          to="tel:18009025311"
         >
           <span>📞</span>
           <span>Call Now</span>

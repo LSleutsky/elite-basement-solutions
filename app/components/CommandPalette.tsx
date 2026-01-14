@@ -44,8 +44,8 @@ const pages = [
     keywords: ["mold", "mildew", "removal", "health", "air quality"]
   },
   {
-    name: "Home Remodeling",
-    href: "/home-remodeling",
+    name: "Basement Renovations",
+    href: "/basement-renovations",
     icon: HousePlus,
     keywords: ["renovation", "remodel", "basement finishing", "kitchen", "bathroom"]
   },

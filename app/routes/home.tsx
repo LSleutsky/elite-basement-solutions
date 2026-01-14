@@ -9,7 +9,7 @@ export function meta() {
   return createMeta({
     title: "Elite Basement Solutions | Basement Waterproofing, Mold Remediation & Remodeling",
     description:
-      "Professional basement waterproofing, mold remediation, and home remodeling services in PA, NJ & DE. Licensed, insured, and backed by a lifetime warranty."
+      "Professional basement waterproofing, mold remediation, and basement remodeling services in PA, NJ & DE. Licensed, insured, and backed by a lifetime warranty."
   });
 }
 
@@ -59,11 +59,15 @@ export default function Home() {
           </span>
           <p className="mt-2 text-sm text-white/80">Years of excellence</p>
         </div>
-        <div className="bg-surface order-4 flex flex-col items-center justify-center rounded-2xl p-6 text-center lg:col-start-3">
-          <p className="text-muted mb-2 text-xs tracking-wider">GOOGLE REVIEWS</p>
-          <span className="text-primary text-4xl font-medium">4.9</span>
-          <p className="text-elite-olive mt-1 text-sm">★★★★★</p>
-        </div>
+        <Link
+          className="bg-surface order-4 flex flex-col items-center justify-center rounded-2xl p-6 text-center lg:col-start-3"
+          target="_blank"
+          to="https://www.bbb.org/us/pa/horsham/profile/basement-contractors/elite-basement-solutions-inc-0241-235982116"
+        >
+          <p className="text-muted mb-2 text-xs tracking-wider">Better Business Bureau</p>
+          <span className="text-primary text-4xl font-medium">A</span>
+          <p className="text-elite-olive mt-1 text-sm">rating</p>
+        </Link>
         <div className="order-5 col-span-1 md:col-span-2 lg:col-span-3">
           <div className="grid grid-cols-2 gap-4">
             {services.map((service) => (
@@ -150,21 +154,21 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        {/* Home Remodeling */}
+        {/* Basement Renovations */}
         <div className="bg-surface group relative overflow-hidden rounded-2xl p-6">
           <div className="bg-elite-teal/10 absolute -top-8 -right-8 h-24 w-24 rounded-full blur-2xl transition-all group-hover:scale-150" />
           <div className="relative">
             <div className="bg-elite-teal/20 mb-4 inline-flex rounded-full p-3">
               <HousePlus className="text-elite-olive" />
             </div>
-            <h3 className="text-primary mb-2 text-xl font-semibold">Home Remodeling</h3>
+            <h3 className="text-primary mb-2 text-xl font-semibold">Basement Renovations</h3>
             <p className="text-muted mb-4 leading-relaxed">
               Transform your basement into a beautiful living space. Full renovations, custom
               finishes.
             </p>
             <Link
               className="text-elite-teal inline-flex items-center gap-1 text-sm font-medium"
-              to="/home-remodeling"
+              to="/basement-renovations"
             >
               Learn more <ArrowRight size={16} />
             </Link>

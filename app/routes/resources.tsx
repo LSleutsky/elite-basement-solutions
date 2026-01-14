@@ -19,7 +19,7 @@ export function meta() {
   return createMeta({
     title: "Knowledge Base & Resources | Elite Basement Solutions",
     description:
-      "Learn about basement waterproofing, mold remediation, foundation repair, home remodeling, and plumbing. Expert knowledge and FAQs from Elite Basement Solutions.",
+      "Learn about basement waterproofing, mold remediation, foundation repair, basement remodeling, and plumbing. Expert knowledge and FAQs from Elite Basement Solutions.",
     path: "resources"
   });
 }
@@ -359,7 +359,7 @@ const knowledgeBase: KnowledgeItem[] = [
       "Covering basement walls with plastic sheets or vapor-barrier-faced insulation seems logical but often creates severe problems. Moisture passing through concrete becomes trapped behind the covering, creating a perfect environment for mold growth. Instead of trapping moisture, proper systems either stop it at the source (penetrating sealers) or direct it into drainage systems (wall panels with weep systems).",
     category: "mold"
   },
-  // Home Remodeling
+  // Basement Renovations
   {
     id: "basement-finishing",
     term: "Basement Finishing Basics",
@@ -702,7 +702,7 @@ export default function Resources() {
           <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
             Everything you need to understand basement waterproofing, mold remediation, foundation
-            repair, and home remodeling. Search our knowledge base or browse by category.
+            repair, and basement remodeling. Search our knowledge base or browse by category.
           </p>
         </div>
         <div className="bg-elite-teal flex flex-col items-center justify-center rounded-2xl p-6 text-center">

@@ -25,7 +25,7 @@ export function meta() {
   return createMeta({
     title: "About Us | Elite Basement Solutions",
     description:
-      "Learn about Elite Basement Solutions - your trusted experts in basement waterproofing, mold remediation, and home remodeling in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
+      "Learn about Elite Basement Solutions - your trusted experts in basement waterproofing, mold remediation, and basement remodeling in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
     path: "about"
   });
 }

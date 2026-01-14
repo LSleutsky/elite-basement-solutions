@@ -25,10 +25,10 @@ import { createMeta } from "@/utils";
 
 export function meta() {
   return createMeta({
-    title: "Home Remodeling | Elite Basement Solutions",
+    title: "Basement Renovations | Elite Basement Solutions",
     description:
-      "Professional home remodeling services including basement finishing, kitchen renovations, and bathroom upgrades in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
-    path: "home-remodeling"
+      "Professional basement remodeling services including basement finishing, kitchen renovations, and bathroom upgrades in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
+    path: "basement-renovations"
   });
 }
 
@@ -56,13 +56,13 @@ const bathroomFeatures = [
   "Accessible & universal design"
 ];
 
-export default function HomeRemodeling() {
+export default function BasementRenovations() {
   return (
     <article className="mx-auto max-w-6xl pb-24 md:pb-0">
       <header className="mb-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
         <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2">
           <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">
-            HOME REMODELING
+            BASEMENT RENOVATIONS
           </p>
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
             Transform your house into your dream home
