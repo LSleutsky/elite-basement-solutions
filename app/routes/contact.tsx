@@ -14,6 +14,7 @@ import {
   RotateCcw,
   Send,
   Shield,
+  Star,
   User,
   UserPen,
   Users
@@ -88,7 +89,14 @@ export default function ContactPage() {
   const stats = [
     { stat: "2,500+", label: "Projects Completed" },
     { stat: `${yearsOfExperience}+`, label: "Years Experience" },
-    { stat: "3", label: "States Served", href: "/service-areas" },
+    {
+      stat: (
+        <span className="flex items-center gap-1">
+          5 <Star className="h-4 w-4 fill-current md:h-4 md:w-4" />
+        </span>
+      ),
+      label: "Average Customer Rating"
+    },
     { stat: "100%", label: "Satisfaction Guarantee" }
   ];
 
@@ -484,11 +492,13 @@ export default function ContactPage() {
                   value={formData.service}
                   onChange={handleChange}
                 >
-                  {services.map((service) => (
-                    <option key={service.value} value={service.value}>
-                      {service.label}
-                    </option>
-                  ))}
+                  {services
+                    .filter((service) => service.value || !formData.service)
+                    .map((service) => (
+                      <option key={service.value} value={service.value}>
+                        {service.label}
+                      </option>
+                    ))}
                 </select>
               </div>
             </div>
@@ -612,29 +622,15 @@ export default function ContactPage() {
         </div>
       </div>
       <div className="mt-4 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {stats.map((item) => {
-          const content = (
-            <>
-              <span className="text-elite-teal text-2xl font-semibold md:text-3xl">
-                {item.stat}
-              </span>
-              <p className="text-muted mt-1 text-xs">{item.label}</p>
-            </>
-          );
-
-          const className =
-            "bg-surface flex flex-col items-center justify-center rounded-2xl p-6 text-center";
-
-          return item.href ? (
-            <Link key={item.label} className={className} to={item.href}>
-              {content}
-            </Link>
-          ) : (
-            <div key={item.label} className={className}>
-              {content}
-            </div>
-          );
-        })}
+        {stats.map((item) => (
+          <div
+            key={item.label}
+            className="bg-surface flex flex-col items-center justify-center rounded-2xl p-6 text-center"
+          >
+            <span className="text-elite-teal text-2xl font-semibold md:text-3xl">{item.stat}</span>
+            <p className="text-muted mt-1 text-xs">{item.label}</p>
+          </div>
+        ))}
       </div>
     </div>
   );
