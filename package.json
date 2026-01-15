@@ -7,7 +7,7 @@
   "scripts": {
     "build": "react-router build",
     "dev": "cross-env NODE_ENV=development node server.ts",
-    "start": "node server.ts",
+    "start": "tsx server.ts",
     "typecheck": "react-router typegen && tsc -b",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -27,6 +27,7 @@
     "react-photo-album": "^3.4.0",
     "react-router": "7.10.1",
     "resend": "^6.7.0",
+    "tsx": "^4.19.0",
     "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
