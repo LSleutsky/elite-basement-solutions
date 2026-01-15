@@ -197,7 +197,6 @@ export default function ContactPage() {
     setErrors({});
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000));
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
