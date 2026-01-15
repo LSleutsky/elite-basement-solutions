@@ -26,6 +26,7 @@
     "react-dom": "^19.2.1",
     "react-photo-album": "^3.4.0",
     "react-router": "7.10.1",
+    "resend": "^6.7.0",
     "yet-another-react-lightbox": "^3.28.0"
   },
   "devDependencies": {
