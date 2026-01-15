@@ -111,7 +111,7 @@ if (DEVELOPMENT) {
   app.use(express.static("build/client", { maxAge: "1h" }));
 
   // SPA fallback - serve index.html for all non-API routes
-  app.get("*", (req, res) => {
+  app.use((req, res) => {
     res.sendFile(path.join(process.cwd(), "build/client/index.html"));
   });
 }
