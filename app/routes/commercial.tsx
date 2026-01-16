@@ -285,9 +285,9 @@ export default function CommercialPage() {
             professionally.
           </p>
           <p className="text-muted text-base leading-relaxed">
-            We coordinate with your insurance company, document everything for claims, and work
-            around your business hours to minimize disruption. {`You'll`} have a single point of
-            contact throughout the entire process.
+            {`We coordinate with you and document everything for any insurance claims you'll be filing, and work
+            around your business hours to minimize disruption. You'll have a single point of
+            contact throughout the entire process.`}
           </p>
         </div>
       </section>

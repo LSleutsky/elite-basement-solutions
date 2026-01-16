@@ -256,15 +256,23 @@ export default function ResidentialPage() {
       </section>
       <section className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-3">
         <div className="bg-surface rounded-2xl p-6 text-center">
-          <span className="text-elite-teal text-3xl font-semibold">4.9</span>
+          <span className="text-elite-teal text-3xl font-semibold">5</span>
           <div className="text-elite-olive my-2">★★★★★</div>
-          <p className="text-muted text-sm">Google Reviews</p>
+          <p className="text-muted text-sm">Expertise</p>
         </div>
         <div className="bg-surface rounded-2xl p-6 text-center">
-          <span className="text-elite-teal text-3xl font-semibold">A+</span>
+          <span className="text-elite-teal text-3xl font-semibold">1,200+</span>
+          <p className="text-muted mt-2 text-sm">Happy Customers</p>
+        </div>
+        {/* <Link
+          className="bg-surface rounded-2xl p-6 text-center"
+          target="_blank"
+          to="https://www.bbb.org/us/pa/horsham/profile/basement-contractors/elite-basement-solutions-inc-0241-235982116"
+        >
+          <span className="text-elite-teal text-3xl font-semibold">A</span>
           <p className="text-muted mt-2 text-sm">BBB Rating</p>
           <p className="text-muted text-xs">Accredited Business</p>
-        </div>
+        </Link> */}
         <div className="bg-surface rounded-2xl p-6 text-center">
           <span className="text-elite-teal text-3xl font-semibold">{yearsOfExperience}+</span>
           <p className="text-muted mt-2 text-sm">Years in Business</p>
