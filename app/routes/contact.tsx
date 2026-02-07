@@ -611,9 +611,9 @@ export default function ContactPage() {
                 <p className="text-primary font-semibold">Email Us</p>
                 <a
                   className="text-elite-teal text-sm hover:underline"
-                  href="mailto:elitebasementsolutionsinc@gmail.com"
+                  href="mailto:info@elitebasementsolutions.com"
                 >
-                  EliteBasementSolutionsInc@gmail.com
+                  info@elitebasementsolutions.com
                 </a>
               </div>
             </div>
