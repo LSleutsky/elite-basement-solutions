@@ -104,7 +104,7 @@ app.get("/api/images", async (_, res) => {
 
     const results = await Promise.all(
       CATEGORIES.map(async (category) => {
-        const url = `https://api.imagekit.io/v1/files?path=/${category}/&fileType=image&type=file&limit=100`;
+        const url = `https://api.imagekit.io/v1/files?path=/elite-basement-solutions/${category}/&fileType=image&type=file&limit=100`;
         const response = await fetch(url, { headers: { Authorization: authHeader } });
 
         if (!response.ok) {

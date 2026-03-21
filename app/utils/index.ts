@@ -69,7 +69,7 @@ export const validatePhone = (phone: string): boolean => {
 export const getImageUrl = (category: string, filename: string, width?: number): string => {
   const transform = width ? `tr:w-${width}` : "";
 
-  return `https://ik.imagekit.io/titan/${transform}/${category}/${filename}`;
+  return `https://ik.imagekit.io/titan/${transform}/elite-basement-solutions/${category}/${filename}`;
 };
 
 export const createMeta = ({
