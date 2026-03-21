@@ -345,7 +345,9 @@ export default function WaterproofingPage() {
           <p className="text-center text-lg font-medium text-white md:text-left md:text-xl">
             Water problems getting worse?
           </p>
-          <p className="text-sm text-white/60">Get a free inspection and custom solution design</p>
+          <p className="text-center text-sm text-white/60">
+            Get a free inspection and custom solution design
+          </p>
         </div>
         <Link
           className="bg-elite-teal inline-flex items-center gap-2 rounded-full px-6 py-2.5 text-sm font-medium text-white transition-opacity hover:opacity-90"

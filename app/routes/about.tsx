@@ -283,7 +283,7 @@ export default function About() {
       <div className="mt-4">
         <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">
           <div>
-            <p className="text-lg font-medium text-white md:text-xl">
+            <p className="text-center text-lg font-medium text-white md:text-xl">
               Ready for tranquility and peace of mind?
             </p>
             <p className="text-center text-sm text-white/60 md:text-left">
