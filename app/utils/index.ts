@@ -66,8 +66,11 @@ export const validatePhone = (phone: string): boolean => {
   return digits.length === 10;
 };
 
-export const getImageUrl = (id: string, size: string = "800x600"): string =>
-  `https://ucarecdn.com/${id}/-/preview/${size}/-/format/auto/-/quality/smart/`;
+export const getImageUrl = (category: string, filename: string, width?: number): string => {
+  const transform = width ? `tr:w-${width}` : "";
+
+  return `https://ik.imagekit.io/titan/${transform}/${category}/${filename}`;
+};
 
 export const createMeta = ({
   title,

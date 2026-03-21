@@ -6,4 +6,5 @@ services:
     environment:
       - NODE_ENV=production
       - RESEND_API_KEY=${RESEND_API_KEY}
+      - IMAGEKIT_PRIVATE_KEY=${IMAGEKIT_PRIVATE_KEY}
     restart: unless-stopped

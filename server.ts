@@ -4,8 +4,12 @@ import morgan from "morgan";
 import path from "path";
 import { Resend } from "resend";
 
+const IMAGEKIT_PRIVATE_KEY = process.env.IMAGEKIT_PRIVATE_KEY || "";
+const CATEGORIES = ["waterproofing", "mold", "foundation", "remodeling"];
 const DEVELOPMENT = process.env.NODE_ENV === "development";
 const PORT = Number.parseInt(process.env.PORT || "3000");
+const CACHE_TTL = 5 * 60 * 1000;
+let cachedImages: { data: object; timestamp: number } | null = null;
 
 const app = express();
 
@@ -82,6 +86,55 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
+app.get("/api/images", async (_, res) => {
+  if (!IMAGEKIT_PRIVATE_KEY) {
+    res.json({ categories: [] });
+
+    return;
+  }
+
+  if (cachedImages && Date.now() - cachedImages.timestamp < CACHE_TTL) {
+    res.json(cachedImages.data);
+
+    return;
+  }
+
+  try {
+    const authHeader = `Basic ${Buffer.from(IMAGEKIT_PRIVATE_KEY + ":").toString("base64")}`;
+
+    const results = await Promise.all(
+      CATEGORIES.map(async (category) => {
+        const url = `https://api.imagekit.io/v1/files?path=/${category}/&fileType=image&type=file&limit=100`;
+        const response = await fetch(url, { headers: { Authorization: authHeader } });
+
+        if (!response.ok) {
+          return { category, images: [] };
+        }
+
+        const files = (await response.json()) as { name: string; width: number; height: number }[];
+
+        const images = files.map((file) => ({
+          filename: file.name,
+          width: file.width,
+          height: file.height
+        }));
+
+        return { category, images };
+      })
+    );
+
+    const data = { categories: results.filter((cat) => cat.images.length > 0) };
+
+    cachedImages = { data, timestamp: Date.now() };
+
+    res.json(data);
+  } catch (error) {
+    console.error(`Error fetching images from ImageKit: ${error}`);
+
+    res.status(500).json({ error: "Failed to fetch images" });
+  }
+});
+
 if (DEVELOPMENT) {
   console.log("Starting development server");
 
@@ -95,11 +148,13 @@ if (DEVELOPMENT) {
   app.use(async (req, res, next) => {
     try {
       const source = await viteDevServer.ssrLoadModule("./server/app.ts");
+
       return await source.app(req, res, next);
     } catch (error) {
       if (typeof error === "object" && error instanceof Error) {
         viteDevServer.ssrFixStacktrace(error);
       }
+
       next(error);
     }
   });
@@ -109,7 +164,6 @@ if (DEVELOPMENT) {
   app.use(morgan("tiny"));
   app.use("/assets", express.static("build/client/assets", { immutable: true, maxAge: "1y" }));
   app.use(express.static("build/client", { maxAge: "1h" }));
-
   // SPA fallback - serve index.html for all non-API routes
   app.use((req, res) => {
     res.sendFile(path.join(process.cwd(), "build/client/index.html"));
