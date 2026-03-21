@@ -138,6 +138,8 @@ app.get("/api/images", async (_, res) => {
 if (DEVELOPMENT) {
   console.log("Starting development server");
 
+  process.loadEnvFile();
+
   const viteDevServer = await import("vite").then((vite) =>
     vite.createServer({
       server: { middlewareMode: true }
