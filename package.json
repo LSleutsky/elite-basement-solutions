@@ -1,6 +1,7 @@
 {
   "name": "elite-basement-solutions",
   "description": "Elite Basement Solutions, a home improvement and commercial contractor for basement waterproofing, mold remediation, and remodeling",
+  "author": "Lush Sleutsky <lush.sleutsky@gmail.com>",
   "version": "1.0.0",
   "private": true,
   "type": "module",
