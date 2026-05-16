@@ -46,7 +46,7 @@ export function meta() {
   return createMeta({
     title: "Project Gallery | Elite Basement Solutions",
     description:
-      "Browse our project gallery showcasing basement waterproofing, mold remediation, foundation repair, and basement remodeling work throughout the Tri-State area.",
+      "Browse our project gallery showcasing basement waterproofing, mold remediation, foundation repair, and basement remodeling work throughout Southeastern Pennsylvania and New Jersey.",
     path: "projects"
   });
 }

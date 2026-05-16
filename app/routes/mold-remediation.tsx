@@ -74,8 +74,9 @@ export default function MoldRemediationPage() {
         </div>
         <div className="bg-elite-teal flex flex-col items-center justify-center rounded-2xl p-6 text-center">
           <ShieldCheck className="mb-2 h-10 w-10 text-white/90" />
-          <span className="text-2xl font-semibold text-white">Certified</span>
-          <p className="text-sm text-white/80">MICRO & EPA Trained</p>
+          {/* TODO(mold): add back certification details when certifications complete */}
+          <span className="text-2xl font-semibold text-white">Professional</span>
+          {/* <p className="text-sm text-white/80">MICRO & EPA Trained</p> */}
         </div>
       </header>
       {/* Understanding Mold */}
@@ -299,8 +300,8 @@ export default function MoldRemediationPage() {
           </div>
           <h3 className="text-primary mb-2 text-lg font-semibold">Certified Technicians</h3>
           <p className="text-muted text-sm">
-            MICRO, CMI, and EPA certified professionals using industry-standard protocols and
-            equipment.
+            {/* TODO(mold): add back certification details when certifications complete */}
+            Highly-trained professionals using industry-standard protocols and equipment.
           </p>
         </div>
         <div className="bg-surface rounded-2xl p-6">

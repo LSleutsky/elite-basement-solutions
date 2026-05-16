@@ -51,6 +51,38 @@ const serviceAreas: { area: string; map: JSX.Element; hash: string }[] = [
   // }
 ];
 
+// TODO(mold): re-enable when certifications and licenses section is restored
+// const certificationsLicenses = [
+//   { name: "EPA", href: "https://www.epa.gov" },
+//   { name: "OSHA", href: "https://www.osha.gov" },
+//   { name: "MICRO", href: "https://www.moldcareer.com/" },
+//   {
+//     name: "CMRC",
+//     href: "https://www.moldcareer.com/training-certification/4/5/195/MICRO-Certified-Mold-Remediation-Contractor-CMRC-Course/"
+//   },
+//   {
+//     name: "CMI",
+//     href: "https://indoorsciences.com/certifications/certified-microbial-investigator/"
+//   },
+//   {
+//     name: "CHST",
+//     href: "https://www.bcsp.org/construction-health-and-safety-technician-chst"
+//   },
+//   { name: "BHA", href: "https://basementhealth.org/industry/certifications/" },
+//   { name: "IAQ", href: "https://www.iaqa.org/" }
+// ];
+
+const ourPromises = [
+  { name: "Licensed" },
+  { name: "Insured" },
+  { name: "Bonded" },
+  { name: "Certified" },
+  { name: "Warranty" },
+  { name: "Punctual" },
+  { name: "Honest" },
+  { name: "Trusted" }
+];
+
 const values = [
   {
     icon: Shield,
@@ -78,8 +110,8 @@ export default function About() {
           </h1>
           <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted text-base leading-relaxed md:text-lg">
-            {`Founded in 1987, Elite Basement Solutions has grown from a small family operation to the
-            Tri-State area's most trusted name in basement services. Our commitment to
+            {`Founded in 1987, Elite Basement Solutions has grown from a small family operation to
+            Southeastern Pennsylvania and New Jersey's most trusted name in basement services. Our commitment to
             quality craftsmanship and honest service has earned us `}
             <em>thousands</em>
             {` of satisfied customers and a reputation that speaks for itself. Everyone `}
@@ -147,28 +179,12 @@ export default function About() {
             <div className="bg-elite-olive/20 rounded-full p-3">
               <Award className="text-elite-olive h-6 w-6" />
             </div>
-            <h3 className="text-primary text-lg font-semibold">Certifications & Licenses</h3>
+            <h3 className="text-primary text-lg font-semibold">Our Promises</h3>
+            {/* <h3 className="text-primary text-lg font-semibold">Certifications & Licenses</h3> */}
           </div>
           <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
-            {[
-              { name: "EPA", href: "https://www.epa.gov" },
-              { name: "OSHA", href: "https://www.osha.gov" },
-              { name: "MICRO", href: "https://www.moldcareer.com/" },
-              {
-                name: "CMRC",
-                href: "https://www.moldcareer.com/training-certification/4/5/195/MICRO-Certified-Mold-Remediation-Contractor-CMRC-Course/"
-              },
-              {
-                name: "CMI",
-                href: "https://indoorsciences.com/certifications/certified-microbial-investigator/"
-              },
-              {
-                name: "CHST",
-                href: "https://www.bcsp.org/construction-health-and-safety-technician-chst"
-              },
-              { name: "BHA", href: "https://basementhealth.org/industry/certifications/" },
-              { name: "IAQ", href: "https://www.iaqa.org/" }
-            ].map((cert) => (
+            {/* TODO(mold): add back certifications and licenses when available */}
+            {/* {certificationsLicenses.map((cert) => (
               <a
                 key={cert.name}
                 className="bg-canvas hover:bg-elite-teal/10 hover:border-elite-teal/20 flex items-center justify-center rounded-xl border border-transparent p-3"
@@ -177,6 +193,14 @@ export default function About() {
                 target="_blank"
               >
                 <p className="text-primary text-center text-sm font-medium">{cert.name}</p>
+              </a>
+            ))} */}
+            {ourPromises.map((promise) => (
+              <a
+                key={promise.name}
+                className="bg-canvas hover:bg-elite-teal/10 hover:border-elite-teal/20 flex items-center justify-center rounded-xl border border-transparent p-3"
+              >
+                <p className="text-primary text-center text-sm font-medium">{promise.name}</p>
               </a>
             ))}
           </div>

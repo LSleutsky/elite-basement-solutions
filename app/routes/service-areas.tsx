@@ -242,8 +242,8 @@ export default function ServiceAreas() {
           </h1>
           <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base">
-            Elite Basement Solutions proudly serves the Tri-State area. Find your town below to
-            confirm we service your location.
+            Elite Basement Solutions proudly serves Southeastern Pennsylvania and New Jersey. Find
+            your town below to confirm we service your location.
           </p>
         </div>
         <div className="bg-elite-teal flex flex-col items-center justify-center rounded-2xl p-6 text-center">

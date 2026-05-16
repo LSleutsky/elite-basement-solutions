@@ -292,7 +292,8 @@ export default function CommercialPage() {
         </div>
       </section>
       {/* Compliance & Certifications */}
-      <section className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-4">
+      {/* TODO(mold): replace to `grid-cols-4 and add back mold certification when mold certifications complete */}
+      <section className="mb-4 grid grid-cols-1 gap-4 md:grid-cols-3">
         <div className="bg-surface rounded-2xl p-6 text-center">
           <div className="bg-elite-teal/20 mx-auto mb-3 inline-flex rounded-full p-3">
             <FileCheck className="text-elite-teal h-5 w-5" />
@@ -307,13 +308,13 @@ export default function CommercialPage() {
           <p className="text-primary text-sm font-semibold">Fully Insured</p>
           <p className="text-muted text-xs">Liability coverage</p>
         </div>
-        <div className="bg-surface rounded-2xl p-6 text-center">
+        {/* <div className="bg-surface rounded-2xl p-6 text-center">
           <div className="bg-elite-teal/20 mx-auto mb-3 inline-flex rounded-full p-3">
             <Biohazard className="text-elite-teal h-5 w-5" />
           </div>
           <p className="text-primary text-sm font-semibold">Mold Certified</p>
           <p className="text-muted text-xs">EPA & IICRC standards</p>
-        </div>
+        </div> */}
         <div className="bg-surface rounded-2xl p-6 text-center">
           <div className="bg-elite-olive/20 mx-auto mb-3 inline-flex rounded-full p-3">
             <HardHat className="text-elite-olive h-5 w-5" />
