@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router";
 
 import {
-  delawareData,
+  // TODO(delaware): restore `delawareData` import when delaware service launches
+  // delawareData,
   newJerseyData,
   pennsylvaniaData,
   ServiceAreaData,
@@ -116,8 +117,9 @@ const StateCard = ({ data, id, isExpanded, onToggle, highlightedTown }: StateCar
 
 const stateCards = [
   { id: "pennsylvania", data: pennsylvaniaData },
-  { id: "new-jersey", data: newJerseyData },
-  { id: "delaware", data: delawareData }
+  { id: "new-jersey", data: newJerseyData }
+  // TODO(delaware): restore `delaware` accordion + search entries when `Delaware` service launches
+  // { id: "delaware", data: delawareData }
 ];
 
 const allTowns: SearchResult[] = stateCards.flatMap(({ id, data }) =>
@@ -245,12 +247,11 @@ export default function ServiceAreas() {
           </p>
         </div>
         <div className="bg-elite-teal flex flex-col items-center justify-center rounded-2xl p-6 text-center">
-          <span className="text-4xl font-semibold text-white">3</span>
+          {/* TODO(delaware): bump back to 3 and add `delawareData.counties.length` when Delaware service launches */}
+          <span className="text-4xl font-semibold text-white">2</span>
           <p className="mt-1 text-sm text-white/80">States Served</p>
           <span className="mt-2 text-2xl font-semibold text-white">
-            {pennsylvaniaData.counties.length +
-              newJerseyData.counties.length +
-              delawareData.counties.length}
+            {pennsylvaniaData.counties.length + newJerseyData.counties.length}
           </span>
           <p className="text-sm text-white/80">Counties</p>
         </div>

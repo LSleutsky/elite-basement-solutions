@@ -9,7 +9,7 @@ export function meta() {
   return createMeta({
     title: "Elite Basement Solutions | Basement Waterproofing, Mold Remediation & Remodeling",
     description:
-      "Professional basement waterproofing, mold remediation, and basement remodeling services in PA, NJ & DE. Licensed, insured, and backed by a lifetime warranty."
+      "Professional basement waterproofing, mold remediation, and basement remodeling services in PA and NJ. Licensed, insured, and backed by a lifetime warranty."
   });
 }
 

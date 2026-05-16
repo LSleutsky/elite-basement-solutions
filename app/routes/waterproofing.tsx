@@ -21,7 +21,7 @@ export function meta() {
   return createMeta({
     title: "Waterproofing Services | Elite Basement Solutions",
     description:
-      "Professional basement waterproofing in PA, NJ & DE. Interior drainage, sump pumps, foundation repair, and moisture control with lifetime warranty.",
+      "Professional basement waterproofing in PA and NJ. Interior drainage, sump pumps, foundation repair, and moisture control with lifetime warranty.",
     path: "waterproofing"
   });
 }

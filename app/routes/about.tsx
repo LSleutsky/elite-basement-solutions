@@ -15,7 +15,8 @@ import { Link } from "react-router";
 
 import {
   NewJersey,
-  NorthernDelaware,
+  // TODO(delaware): restore `NorthernDelaware` import when delaware service launches
+  // NorthernDelaware,
   SoutheasternPennsylvania
 } from "@/components/ServiceAreaMaps";
 
@@ -25,7 +26,8 @@ export function meta() {
   return createMeta({
     title: "About Us | Elite Basement Solutions",
     description:
-      "Learn about Elite Basement Solutions - your trusted experts in basement waterproofing, mold remediation, and basement remodeling in Southeastern Pennsylvania, New Jersey, and Northern Delaware.",
+      // TODO add back `Northern Delaware` to description when delaware service launches
+      "Learn about Elite Basement Solutions - your trusted experts in basement waterproofing, mold remediation, and basement remodeling in Southeastern Pennsylvania and New Jersey.",
     path: "about"
   });
 }
@@ -40,12 +42,13 @@ const serviceAreas: { area: string; map: JSX.Element; hash: string }[] = [
     area: "New Jersey",
     map: <NewJersey className="h-full w-full" />,
     hash: "new-jersey"
-  },
-  {
-    area: "Delaware",
-    map: <NorthernDelaware className="h-full w-full" />,
-    hash: "delaware"
   }
+  // TODO(delaware): restore `Delaware` entry when `Delaware` service launches
+  // {
+  //   area: "Delaware",
+  //   map: <NorthernDelaware className="h-full w-full" />,
+  //   hash: "delaware"
+  // }
 ];
 
 const values = [
@@ -114,8 +117,9 @@ export default function About() {
           </div>
         ))}
       </div>
-      <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-3">
-        <div className="bg-surface rounded-2xl p-6 lg:col-span-3">
+      {/* TODO(delaware): restore grid-cols lg:grid-cols-3 + col-span-3 when Delaware service launches */}
+      <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="bg-surface rounded-2xl p-6 md:col-span-2">
           <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">SERVICE AREA</p>
           <h2 className="text-primary font-serif text-2xl md:text-3xl">
             Experts who care about your home

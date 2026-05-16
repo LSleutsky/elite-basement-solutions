@@ -19,7 +19,7 @@ export function meta() {
   return createMeta({
     title: "Residential Services | Elite Basement Solutions",
     description:
-      "Comprehensive home improvement services for homeowners in PA, NJ & DE. Basement waterproofing, mold remediation, and complete basement remodeling with lifetime warranty.",
+      "Comprehensive home improvement services for homeowners in PA and NJ. Basement waterproofing, mold remediation, and complete basement remodeling with lifetime warranty.",
     path: "residential"
   });
 }

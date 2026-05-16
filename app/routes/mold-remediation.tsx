@@ -21,7 +21,7 @@ export function meta() {
   return createMeta({
     title: "Mold Remediation Services | Elite Basement Solutions",
     description:
-      "Professional mold remediation in PA, NJ & DE. Certified mold removal, air quality restoration, and moisture control. Protect your family's health.",
+      "Professional mold remediation in PA and NJ. Certified mold removal, air quality restoration, and moisture control. Protect your family's health.",
     path: "mold-remediation"
   });
 }

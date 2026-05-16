@@ -22,7 +22,7 @@ export function meta() {
   return createMeta({
     title: "Commercial Services | Elite Basement Solutions",
     description:
-      "Professional commercial waterproofing, mold remediation, and facility restoration for businesses in PA, NJ & DE. Minimize downtime, maximize protection.",
+      "Professional commercial waterproofing, mold remediation, and facility restoration for businesses in PA and NJ. Minimize downtime, maximize protection.",
     path: "commercial"
   });
 }
@@ -319,7 +319,7 @@ export default function CommercialPage() {
             <HardHat className="text-elite-olive h-5 w-5" />
           </div>
           <p className="text-primary text-sm font-semibold">Licensed</p>
-          <p className="text-muted text-xs">PA, NJ & DE</p>
+          <p className="text-muted text-xs">PA and NJ</p>
         </div>
       </section>
       <div className="flex flex-col items-center justify-between gap-4 rounded-2xl bg-[#0d0d0d] p-6 md:flex-row md:p-8">

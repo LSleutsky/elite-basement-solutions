@@ -36,7 +36,7 @@ export function meta() {
   return createMeta({
     title: "Contact Us | Elite Basement Solutions",
     description:
-      "Get a free estimate for basement waterproofing, mold remediation, or basement remodeling in PA, NJ & DE. Contact Elite Basement Solutions today.",
+      "Get a free estimate for basement waterproofing, mold remediation, or basement remodeling in PA and NJ. Contact Elite Basement Solutions today.",
     path: "contact"
   });
 }
@@ -161,8 +161,8 @@ export default function ContactPage() {
 
     if (!formData.state.trim()) {
       newErrors.state = "State is required";
-    } else if (!["PA", "NJ", "DE"].includes(formData.state)) {
-      newErrors.state = "Must be PA, NJ, or DE";
+    } else if (!["PA", "NJ"].includes(formData.state)) {
+      newErrors.state = "Must be PA or NJ";
     }
 
     if (!formData.zipCode.trim()) {
@@ -626,7 +626,7 @@ export default function ContactPage() {
               </div>
               <div>
                 <p className="text-primary font-semibold">Service Area</p>
-                <p className="text-muted text-sm">PA, NJ & DE</p>
+                <p className="text-muted text-sm">PA and NJ</p>
               </div>
             </div>
             <Link className="text-elite-teal text-sm hover:underline" to="/service-areas">
