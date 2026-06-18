@@ -1,4 +1,8 @@
-.react-router
-build
-node_modules
-README.md
+**/node_modules
+**/build
+**/.react-router
+**/*.tsbuildinfo
+.git
+.vscode
+**/.env
+**/README.md

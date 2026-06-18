@@ -1,86 +1,66 @@
-# Welcome to React Router!
+# Elite Interior Solutions
 
-A modern, production-ready template for building full-stack React applications using React Router.
+A pnpm workspace monorepo housing two independently deployable React Router 7 apps that share a
+common UI, theme, and server layer.
 
-## Features
+## Apps
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+- **`apps/elite-basement-solutions`** (*`@elite/basement-solutions`*): basement waterproofing, mold
+  remediation, and remodeling. Production: `www.elitebasementsolutions.com`.
+- **`apps/elite-kitchens-bathrooms`** (*`@elite/kitchens-bathrooms`*): kitchen and bathroom
+  remodeling. Production: `www.elitekitchensbathrooms.com`.
 
-## Getting Started
+## Shared packages
 
-### Installation
+- **`packages/ui`** (*`@elite/ui`*): shared layout, theme tokens, components, hooks, service-area
+  data, and utilities. Brand-specific behavior is driven by each app's `site` config.
+- **`packages/server`** (*`@elite/server`*): the Express app factory (`/api/contact`,
+  `/api/images`) parameterized per app.
+- **`packages/config`** (*`@elite/config`*): shared ESLint, Prettier, and TypeScript bases.
 
-Install the dependencies:
+## Requirements
+
+- Node `>=22`
+- pnpm `11.7.0` (managed via Corepack: run `corepack enable` once)
+
+## Development
 
 ```bash
-npm install
+pnpm install
+
+pnpm basements   # Elite Basement Solutions  -> http://localhost:3000
+pnpm kitchens    # Elite Kitchens & Bathrooms -> http://localhost:3001
 ```
 
-### Development
+Both can run concurrently. Local environment variables are read from the workspace-root `.env`.
 
-Start the development server with HMR:
+## Build
 
 ```bash
-npm run dev
+pnpm build              # both apps
+pnpm build:basements    # one app
+pnpm build:kitchens
 ```
 
-Your application will be available at `http://localhost:5173`.
-
-## Building for Production
-
-Create a production build:
+## Quality
 
 ```bash
-npm run build
+pnpm typecheck
+pnpm lint
+pnpm format
 ```
 
 ## Deployment
 
-### Docker Deployment
-
-To build and run using Docker:
+Each app ships its own `Dockerfile` and `docker-compose.yml` (build context is the repo root, so
+the workspace and shared packages are available). Deploy one app without touching the other:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+cd apps/elite-basement-solutions   # or apps/elite-kitchens-bathrooms
+docker compose down && docker compose up --build -d
 ```
 
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── server.ts
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
-
----
-
-Built with ❤️ using React Router.
+| App                        | Host port | Domain                         |
+| -------------------------- | --------- | ------------------------------ |
+| Elite Basement Solutions   | 3001      | www.elitebasementsolutions.com |
+| Elite Kitchens & Bathrooms | 3004      | www.elitekitchensbathrooms.com |

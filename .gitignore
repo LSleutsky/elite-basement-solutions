@@ -2,10 +2,12 @@
 .env
 .env.local
 .env.production
-/node_modules/
+
+node_modules/
 *.tsbuildinfo
+
 .vscode/
 
 # React Router
-/.react-router/
-/build/
+.react-router/
+build/
