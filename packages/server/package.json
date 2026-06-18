@@ -1,0 +1,28 @@
+{
+  "name": "@elite/server",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "dependencies": {
+    "compression": "catalog:",
+    "express": "catalog:",
+    "morgan": "catalog:",
+    "nodemailer": "catalog:",
+    "resend": "catalog:"
+  },
+  "devDependencies": {
+    "@types/compression": "catalog:",
+    "@types/express": "catalog:",
+    "@types/morgan": "catalog:",
+    "@types/node": "catalog:",
+    "@types/nodemailer": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:"
+  }
+}

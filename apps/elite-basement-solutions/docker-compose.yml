@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: ../..
+      dockerfile: apps/elite-basement-solutions/Dockerfile
+    ports:
+      - "127.0.0.1:3001:3000"
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - ../../.env
+    restart: unless-stopped

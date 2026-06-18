@@ -1,0 +1,43 @@
+{
+  "name": "@elite/basement-solutions",
+  "description": "Elite Basement Solutions: basement waterproofing, mold remediation, and remodeling",
+  "author": "Lush Sleutsky <lush.sleutsky@gmail.com>",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development node --import tsx --env-file-if-exists=../../.env server.ts",
+    "build": "react-router build",
+    "start": "tsx server.ts",
+    "typecheck": "react-router typegen && tsc --noEmit -p tsconfig.json && tsc --noEmit -p tsconfig.node.json"
+  },
+  "dependencies": {
+    "@elite/server": "workspace:*",
+    "@elite/ui": "workspace:*",
+    "@react-router/express": "catalog:",
+    "@react-router/node": "catalog:",
+    "express": "catalog:",
+    "isbot": "catalog:",
+    "lucide-react": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-photo-album": "catalog:",
+    "react-router": "catalog:",
+    "tsx": "catalog:",
+    "yet-another-react-lightbox": "catalog:"
+  },
+  "devDependencies": {
+    "@react-router/dev": "catalog:",
+    "@tailwindcss/vite": "catalog:",
+    "@types/express": "catalog:",
+    "@types/express-serve-static-core": "catalog:",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "cross-env": "catalog:",
+    "tailwindcss": "catalog:",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "catalog:"
+  }
+}
