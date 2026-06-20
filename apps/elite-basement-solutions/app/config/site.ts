@@ -20,6 +20,15 @@ export const siteConfig: SiteConfig = {
   phone: "(800) 902-5311",
   phoneHref: "18009025311",
   imageKitFolder: "elite-basement-solutions",
+  email: "info@elitebasementsolutions.com",
+  contactServices: [
+    { value: "waterproofing", label: "Waterproofing" },
+    { value: "mold-remediation", label: "Mold Remediation" },
+    { value: "basement-renovations", label: "Basement Renovations" }
+  ],
+  contactHeading: "Let's protect your investment together.",
+  contactIntro:
+    "Ready to solve your water and mold problems for good? Fill out the form below and one of our experts will reach out within 24 hours to schedule your free, no-obligation inspection.",
   navLinks: [
     { name: "Services", href: "services" },
     { name: "Projects", href: "projects" },

@@ -1,5 +1,0 @@
-@import "tailwindcss";
-@import "@elite/ui/theme.css";
-
-/* Detect Tailwind classes used in the shared @elite/ui package source. */
-@source "../../../packages/ui/src";

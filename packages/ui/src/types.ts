@@ -27,4 +27,8 @@ export interface SiteConfig {
   trustItems: string[];
   commandPalettePages: CommandPalettePage[];
   imageKitFolder: string;
+  email: string;
+  contactServices: ContactService[];
+  contactHeading: string;
+  contactIntro: string;
 }

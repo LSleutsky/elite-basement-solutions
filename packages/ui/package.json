@@ -12,7 +12,12 @@
     "./components/Layout": "./src/components/Layout.tsx",
     "./components/ThemeToggle": "./src/components/ThemeToggle.tsx",
     "./components/Logo": "./src/components/Logo.tsx",
+    "./components/Root": "./src/components/Root.tsx",
+    "./components/AboutView": "./src/components/AboutView.tsx",
     "./components/CommandPalette": "./src/components/CommandPalette.tsx",
+    "./components/ContactView": "./src/components/ContactView.tsx",
+    "./components/HomeView": "./src/components/HomeView.tsx",
+    "./components/ProjectsView": "./src/components/ProjectsView.tsx",
     "./components/ServiceAreaMaps": "./src/components/ServiceAreaMaps.tsx",
     "./components/ServiceAreasView": "./src/components/ServiceAreasView.tsx"
   },
@@ -20,7 +25,9 @@
     "typecheck": "tsc --noEmit -p tsconfig.json"
   },
   "dependencies": {
-    "lucide-react": "catalog:"
+    "lucide-react": "catalog:",
+    "react-photo-album": "catalog:",
+    "yet-another-react-lightbox": "catalog:"
   },
   "peerDependencies": {
     "react": "catalog:",

@@ -19,6 +19,15 @@ export const siteConfig: SiteConfig = {
   phone: "(800) 902-5311",
   phoneHref: "18009025311",
   imageKitFolder: "elite-kitchens-bathrooms",
+  email: "info@elitekitchensbathrooms.com",
+  contactServices: [
+    { value: "kitchen-remodeling", label: "Kitchen Remodeling" },
+    { value: "bathroom-remodeling", label: "Bathroom Remodeling" },
+    { value: "full-renovation", label: "Full Renovation" }
+  ],
+  contactHeading: "Let's design your dream space together.",
+  contactIntro:
+    "Ready to remodel your kitchen or bathroom? Fill out the form below and one of our experts will reach out within 24 hours to schedule your free, no-obligation consultation.",
   navLinks: [
     { name: "Services", href: "services" },
     { name: "Projects", href: "projects" },

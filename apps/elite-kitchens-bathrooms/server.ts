@@ -14,7 +14,7 @@ await createServer({
   },
   // TODO: refactor this functionality when email service is decided on (likely GoDaddy SMTP).
   email: nodemailerEmail({
-    from: "Elite Kitchens & Bathrooms <joe@elitekitchensbathrooms.com>",
-    to: ["joe@elitekitchensbathrooms.com"]
+    from: "Elite Kitchens & Bathrooms <info@elitekitchensbathrooms.com>",
+    to: ["info@elitekitchensbathrooms.com"]
   })
 });

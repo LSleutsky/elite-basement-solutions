@@ -59,7 +59,7 @@ export default function Kitchens() {
         <div className="bg-surface rounded-2xl p-6 md:p-8 lg:col-span-2">
           <p className="text-elite-teal mb-2 text-xs font-medium tracking-[0.2em]">KITCHENS</p>
           <h1 className="text-primary font-serif text-3xl leading-tight md:text-4xl lg:text-5xl">
-            The heart of your home, reimagined.
+            The heart of your home, pristine.
           </h1>
           <div className="bg-elite-teal/20 my-6 h-px w-24" />
           <p className="text-muted mt-4 text-base md:text-lg">
