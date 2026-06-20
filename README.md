@@ -54,13 +54,3 @@ pnpm format
 
 Each app ships its own `Dockerfile` and `docker-compose.yml` (build context is the repo root, so
 the workspace and shared packages are available). Deploy one app without touching the other:
-
-```bash
-cd apps/elite-basement-solutions   # or apps/elite-kitchens-bathrooms
-docker compose down && docker compose up --build -d
-```
-
-| App                        | Host port | Domain                         |
-| -------------------------- | --------- | ------------------------------ |
-| Elite Basement Solutions   | 3001      | www.elitebasementsolutions.com |
-| Elite Kitchens & Bathrooms | 3004      | www.elitekitchensbathrooms.com |
