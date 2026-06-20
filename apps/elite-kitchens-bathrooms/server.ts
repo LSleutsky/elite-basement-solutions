@@ -12,9 +12,8 @@ await createServer({
     "full-renovation": "Full Renovation",
     other: "Other"
   },
-  // TODO: refactor this functionality when email service is decided on (likely GoDaddy SMTP).
   email: nodemailerEmail({
-    from: "Elite Kitchens & Bathrooms <info@elitekitchensbathrooms.com>",
-    to: ["info@elitekitchensbathrooms.com"]
+    from: `Elite Kitchens & Bathrooms <${process.env.SMTP_USER}>`,
+    to: ["joe@elitekitchensbathrooms.com"]
   })
 });
