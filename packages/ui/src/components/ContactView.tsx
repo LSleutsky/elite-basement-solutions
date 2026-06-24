@@ -601,13 +601,7 @@ export default function ContactView({ config }: ContactViewProps) {
                 <Mail className="text-elite-teal h-5 w-5" />
               </div>
               <div>
-                <p className="text-primary font-semibold">Email Us</p>
-                <a
-                  className="text-elite-teal text-sm hover:underline"
-                  href={`mailto:${config.email}`}
-                >
-                  {config.email}
-                </a>
+                <p className="text-primary font-semibold">Contact Us</p>
               </div>
             </div>
             <p className="text-muted text-sm">We respond within 24 hours</p>
